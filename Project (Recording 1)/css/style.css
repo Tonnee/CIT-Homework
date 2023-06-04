@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1407px;
+    margin: 0 auto;
+}
+
+/* ===================== Common CSS Start ===================== */
+:root {
+    --font-sans: "Open Sans", sans-serif;
+    --font-nunito: "Nunito", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+    --font-color: #29313d;
+    --primary-color: #ff5538;
+}
+
+.span_block {
+    display: block;
+}
+
+.primary_btn {
+    font-family: var(--font-nunito);
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 29px;
+    background-color: var(--primary-color);
+    border-radius: 18px;
+    transition: all linear 0.3s;
+}
+
+.primary_btn:hover {
+    background-color: var(--font-color);
+}
+
+.outline_btn {
+    font-family: var(--font-nunito);
+    font-size: 18px;
+    color: var(--primary-color);
+    padding: 18px 27px;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    border-radius: 18px;
+    transition: all linear 0.3s;
+}
+/* ===================== Common CSS End ===================== */
+
+/* ===================== Nav Start ===================== */
+nav {
+    padding: 30px 0;
+}
+
+nav .box {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    width: 20%;
+}
+
+nav .nav-item {
+    width: 60%;
+}
+
+nav .nav-item ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    font-family: var(--font-sans);
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav .nav-item ul li i {
+    margin-left: 14px;
+}
+
+nav .button {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+/* ===================== Nav End ===================== */
+
+/* ===================== Banner Start ===================== */
+.header {
+    background: url(../images/banner-bg.png) no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+#banner {
+    padding-top: 180px;
+    padding-bottom: 150px;
+    position: relative;
+}
+
+#banner h1 {
+    font-family: var(--font-poppins);
+    font-size: 64px;
+    color: var(--font-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 130%;
+}
+
+#banner p {
+    font-family: var(--font-nunito);
+    size: 18px;
+    color: var(--font-color);
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 200%;
+    margin-top: 24px;
+}
+
+.btn_box {
+    text-align: center;
+    margin-top: 64px;
+}
+
+.btn_box a {
+    margin: 0 12px;
+}
+
+#banner .round_shape {
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+    border: 2px solid #ffabba;
+    position: absolute;
+    top: 18px;
+    left: 720px;
+    animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#banner .round_shape .inner_round {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffabba;
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+}
+
+#banner .dot {
+    width: 18px;
+    height: 18px;
+    background-color: #c087ee;
+    border-radius: 50%;
+    position: absolute;
+    top: 138px;
+    left: 1090px;
+    animation: updown 3s infinite alternate linear;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#banner .cross i {
+    font-size: 22px;
+    color: #c087ee;
+    position: absolute;
+    top: 227px;
+    left: 1300px;
+    animation: rotate 3s infinite linear;
+}
+/* ===================== Banner End ===================== */

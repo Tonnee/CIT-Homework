@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.font_rale {
+    font-family: "Raleway", sans-serif;
+}
+
+.font_mon {
+    font-family: "Montserrat", sans-serif;
+}
+
+.font_500 {
+    font-weight: 500;
+}
+
+.font_600 {
+    font-weight: 600;
+}
+
+.font_700 {
+    font-weight: 700;
+}
+
+.font_16 {
+    font-size: 16px;
+}
+/* ------------------------- Nav Start ------------------------- */
+nav {
+    padding-top: 55px;
+    position: relative;
+}
+
+nav .nav_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav_brand img {
+    height: 60px;
+}
+
+nav .nav_item {
+    display: flex;
+}
+
+nav .nav_item ul {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+nav .nav_item ul li a {
+    color: #fff;
+    font-size: 20px;
+    color: #fff;
+}
+
+nav .nav_item ul li:last-child a {
+    color: #212832;
+}
+
+nav .nav_item .nav_btn {
+    font-size: 20px;
+    padding: 18px 17px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 12px;
+    margin-left: 55px;
+}
+
+nav .dropdown_main {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+nav .dropdown_main ol li {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav .dropdown:hover .dropdown_main {
+    visibility: visible;
+    opacity: 1;
+}
+/* ------------------------- Nav End ------------------------- */
+
+/* ------------------------- Hero Start ------------------------- */
+#hero {
+    background: url(../images/banner.png) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 700px;
+}
+/* ------------------------- Banner Start ------------------------- */
+#banner {
+    margin-top: 111px;
+}
+
+#banner .banner_item {
+    display: flex;
+    gap: 22px;
+}
+
+#banner .banner_item p {
+    color: #fff;
+    position: relative;
+}
+
+#banner .banner_item p::after {
+    width: 2px;
+    height: 10px;
+    background-color: #fff;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -11px;
+    z-index: 1;
+}
+
+#banner .banner_item p:last-child::after {
+    display: none;
+}
+
+#banner .banner_wrapper h1 {
+    width: 506px;
+    font-size: 47px;
+    line-height: 57px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+#banner .banner_wrapper .banner_heading {
+    width: 506px;
+    position: relative;
+}
+
+#banner .banner_wrapper .plane_img {
+    position: absolute;
+    top: 0;
+    right: -42px;
+    animation: fly 2s linear infinite;
+}
+
+@keyframes fly {
+    from {
+        top: 0;
+        right: -42px;
+    }
+    to {
+        top: -371px;
+        right: -804px;
+    }
+}

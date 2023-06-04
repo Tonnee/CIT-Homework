@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-font: "Poppins", sans-serif;
+    --secondery-font: "Frank Ruhl Libre", serif;
+    --primary-color: #fae3b6;
+    --secondary-color: #cfa485;
+    --tertiary-color: #fdbb57;
+    --font-color: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+/* ======================== Common CSS start ===================== */
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.font_pop {
+    font-family: var(--primary-font);
+}
+
+.font_frank {
+    font-family: var(--secondery-font);
+}
+
+.font_pod {
+    font-family: "Podkova", serif;
+}
+
+.font_22 {
+    font-size: 22px;
+}
+
+.font_24 {
+    font-size: 24px;
+}
+
+.font_28 {
+    font-size: 28px;
+}
+
+.font_64 {
+    font-size: 64px;
+}
+
+.font_500 {
+    font-weight: 500;
+}
+
+.font_600 {
+    font-weight: 600;
+}
+
+.font_700 {
+    font-weight: 700;
+}
+
+.dark_btn {
+    background-color: #000000;
+    padding: 25px 91px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_white {
+    color: #fff;
+}
+/* ======================== Common CSS end ===================== */
+
+/* ======================== Nav CSS start ===================== */
+nav {
+    padding: 44px 0;
+    background-color: var(--primary-color);
+}
+
+.nav_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav_logo {
+    width: 15%;
+}
+
+.nav_logo img {
+    height: 34px;
+}
+
+.collapse_wrapper {
+    display: none;
+}
+
+.nav_item {
+    width: 65%;
+}
+
+.nav_item_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.nav_item .nav_item_wrapper li {
+    margin: 10px 30px;
+}
+
+.nav_item .nav_item_wrapper li a {
+    color: var(--font-color);
+}
+
+.nav_btn {
+    width: 25%;
+}
+
+.nav_btn .btn_wrapper {
+    text-align: right;
+}
+
+.collapse_wrapper label {
+    cursor: pointer;
+}
+
+.nav_btn a {
+    display: inline-block;
+    border: 1px solid var(--tertiary-color);
+    padding: 10px 28px;
+    border-radius: 10px;
+    color: var(--font-color);
+    margin-left: 10px;
+    background-color: var(--primary-color);
+    -webkit-box-shadow: 0px 3px 13px -3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 13px -3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 13px -3px rgba(0, 0, 0, 0.2);
+}
+.nav_btn a:hover {
+    background-color: var(--tertiary-color);
+}
+
+nav input,
+nav label {
+    display: none;
+}
+/* ======================== Nav CSS end ===================== */
+
+/* ======================== Banner CSS start ===================== */
+#banner {
+    background-color: var(--primary-color);
+    padding: 50px 0 135px 0;
+    border-radius: 0 0 20px 20px;
+}
+
+#banner .banner_wrapper {
+    display: flex;
+}
+
+#banner .banner_text {
+    width: 50%;
+}
+
+#banner .banner_text h1 {
+    width: 500px;
+}
+
+#banner .banner_text p {
+    width: 500px;
+    margin-top: 31px;
+}
+
+#banner .banner_text .dark_btn {
+    margin-top: 76px;
+}
+
+#banner .banner_img {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#banner .img_wrapper {
+    width: 535px;
+    position: relative;
+    z-index: 2;
+}
+
+#banner .img_wrapper .b_img {
+    width: 100%;
+    display: block;
+    border-bottom-left-radius: 195px;
+    position: relative;
+    z-index: 2;
+}
+
+#banner .banner_dot {
+    width: 225px;
+    position: absolute;
+    left: -143px;
+    bottom: -98px;
+    z-index: 1;
+}
+
+#banner .banner_dot img {
+    width: 100%;
+    display: block;
+}
+/* ======================== Banner CSS end ===================== */
+
+/* ======================== Collection CSS start ===================== */
+#collection h2 {
+    margin-top: 216px;
+    margin-bottom: 28px;
+}
+
+#collection .collection_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#collection .collection_wrapper .collectiion_box {
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+#collection .collection_wrapper .collectiion_box:hover .collection_category {
+    bottom: 15px;
+}
+
+#collection .collection_wrapper .collectiion_box img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+#collection .collection_category {
+    width: 90%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s;
+}
+/* ======================== Collection CSS End ===================== */
+
+/* ======================== Fashion CSS start ===================== */
+#fashion {
+    margin-top: 236px;
+}
+
+#fashion .fashion_wrapper {
+    display: flex;
+}
+
+#fashion .fashion_wrapper .fashion_img {
+    width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+#fashion .fashion_wrapper .fashion_img .f_img {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+#fashion .fashion_wrapper .fashion_text {
+    width: 50%;
+    padding-left: 124px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#fashion .fashion_wrapper .fashion_text .fashion_title,
+#fashion .fashion_wrapper .fashion_text .fashion_details {
+    width: 443px;
+}
+
+#fashion .fashion_wrapper .fashion_text h2 {
+    margin-top: 83px;
+}
+
+#fashion .fashion_wrapper .fashion_text p {
+    margin-top: 43px;
+}
+
+#fashion .fashion_wrapper .fashion_dot {
+    width: 179px;
+    position: absolute;
+    top: -107px;
+    right: -70px;
+    z-index: 1;
+}
+
+#fashion .fashion_wrapper .fashion_dot img {
+    width: 100%;
+    display: block;
+}
+
+#fashion .fashion_data_main {
+    width: 900px;
+    background-color: var(--primary-color);
+    padding: 72px 42px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: -129px;
+    bottom: -218px;
+}
+
+#fashion .fashion_data_main .fashion_data_box {
+    width: 33%;
+    border-right: 1px solid #000;
+    padding: 0 44px;
+    box-sizing: border-box;
+}
+
+#fashion .fashion_data_main .fashion_data_box:last-child {
+    border-right: none;
+}
+
+#fashion .fashion_data_main .fashion_data_box p {
+    margin-top: 28px;
+}
+/* ======================== Fashion CSS End ===================== */
+
+/* ======================== Best Seller CSS Start ===================== */
+#best_seller {
+    margin-top: 335px;
+    background-color: var(--secondary-color);
+    padding: 36px 0 191px 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+#best_seller .best_seller_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#best_seller .best_seller_text {
+    width: 36%;
+}
+
+#best_seller .best_seller_text p {
+    margin-top: 43px;
+}
+
+#best_seller .best_seller_text .dark_btn {
+    margin-top: 65px;
+}
+
+#best_seller .best_seller_img {
+    width: 29%;
+    margin-top: 25px;
+}
+
+#best_seller .best_seller_img .best_img_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 60px 60px 0 0;
+}
+
+#best_seller .best_seller_img .best_seller_info {
+    background-color: #ffffff;
+}
+
+#best_seller .best_seller_img .best_seller_info .info_wrapper {
+    padding: 14px 22px 19px 22px;
+    box-sizing: border-box;
+}
+
+#best_seller .best_seller_img .best_seller_info .info_wrapper i {
+    color: #ffaf37;
+    font-size: 18px;
+}
+
+#best_seller .best_seller_img .best_seller_info .info_wrapper h6 {
+    margin-top: 12px;
+}
+
+#best_seller .best_seller_img .best_seller_info .price_box {
+    display: flex;
+    margin-top: 8px;
+}
+
+#best_seller .best_seller_img .best_seller_info .price_box .previous_price {
+    color: #c4c4c4;
+    margin-right: 44px;
+}
+
+#best_seller .best_seller_dot {
+    width: 179px;
+    position: absolute;
+    top: -145px;
+    left: 470px;
+    z-index: 1;
+}
+
+#best_seller .best_seller_dot img {
+    width: 100%;
+    display: block;
+}
+/* ======================== Best Seller CSS End ===================== */
