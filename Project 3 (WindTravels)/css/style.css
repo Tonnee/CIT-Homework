@@ -225,6 +225,11 @@ nav .dropdown:hover .dropdown_main {
     padding: 10px;
 }
 
+#banner .banner_wrapper .banner_popular .banner_popular_item_box .popular_item:hover .popular_img img {
+    border: 1px solid #e7ac72;
+    border-radius: 10px 10px 4px 4px;
+}
+
 #banner .banner_wrapper .banner_popular .popular_item .popular_img {
     height: 154px;
     width: 100%;
@@ -238,6 +243,7 @@ nav .dropdown:hover .dropdown_main {
     object-fit: cover;
     object-position: center;
     border-radius: 10px 10px 4px 4px;
+    border: 1px solid transparent;
 }
 
 #banner .banner_wrapper .banner_popular .popular_item h3 {
@@ -245,11 +251,10 @@ nav .dropdown:hover .dropdown_main {
     color: #212832;
     font-weight: 500;
     margin-top: 10px;
+    transition: all linear .2s;
 }
 
 #banner .banner_wrapper .banner_popular .popular_item i {
-    font-size: 12px;
-    color: #212832;
     margin-right: 5px;
 }
 
@@ -257,6 +262,16 @@ nav .dropdown:hover .dropdown_main {
     font-size: 12px;
     color: #212832;
     font-weight: 300;
+    transition: all linear .2s;
+}
+
+#banner .banner_wrapper .banner_popular .banner_popular_item_box .popular_item:hover h3 {
+    transform: translateX(8%);
+
+}
+
+#banner .banner_wrapper .banner_popular .banner_popular_item_box .popular_item:hover p {
+    transform: translateX(10%);
 }
 
 #banner .banner_wrapper .banner_form {
