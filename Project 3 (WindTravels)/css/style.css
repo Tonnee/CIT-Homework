@@ -169,7 +169,7 @@ nav .dropdown:hover .dropdown_main {
     position: absolute;
     top: 0;
     right: -42px;
-    animation: fly 2s linear infinite;
+    /* animation: fly 2s linear infinite; */
 }
 
 @keyframes fly {
