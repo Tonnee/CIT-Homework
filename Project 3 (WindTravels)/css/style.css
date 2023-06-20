@@ -30,6 +30,14 @@ a {
     font-family: "Poppins", sans-serif;
 }
 
+.font_vol {
+    font-family: 'Volkhov', serif;
+}
+
+.font_open {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .font_500 {
     font-weight: 500;
 }
@@ -44,6 +52,23 @@ a {
 
 .font_16 {
     font-size: 16px;
+}
+
+.font_18 {
+    font-size: 18px;
+}
+
+
+.font_20 {
+    font-size: 20px;
+}
+
+.font_50 {
+    font-size: 50px;
+}
+
+.text_center {
+    text-align: center;
 }
 /* ------------------------- Nav Start ------------------------- */
 nav {
@@ -404,3 +429,377 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     outline: none;
     margin-left: 24px;
 }
+/* ------------------------- Banner end ------------------------- */
+
+/* ------------------------- Service Start ------------------------- */
+#service {
+    position: relative;
+}
+
+#service .service_top p {
+    text-transform: uppercase;
+    color: 5E6282;
+    margin-top: 10px;
+}
+
+#service .service_top h3 {
+    color: #14183E;
+    margin-top: 10px;
+}
+
+#service .service_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+#service .service_main .service_item {
+    width: 18%;
+    background-color: #fff;
+    border-radius: 36px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 40px 30px transparent;
+    transition: all linear .3s;
+    margin-top: 68px;
+}
+
+#service .service_main .service_item:hover {
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+#service .service_main .service_img {
+    width: 92px;
+    margin: 0 auto;
+}
+
+#service .service_main .service_img img {
+    width: 100%;
+    display: block;
+}
+
+#service .service_main h6 {
+    margin-top: 29px;
+    color: #1E1D4C;
+}
+
+#service .service_main p {
+    color: #5E6282;
+    width: 181px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#service .service_main .service_item .item_shape {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 30px 0px 10px 0px;
+    position: absolute;
+    left: -35px;
+    bottom: -33px;
+    z-index: -1;
+    transition: all linear .3s;
+}
+
+#service .service_main .service_item:hover .item_shape {
+    background-color: #E7AC72;
+}
+
+#service .service_float {
+    width: 153px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+#service .service_float img {
+    width: 100%;
+    display: block;
+}
+/* ------------------------- Service End ------------------------- */
+
+/* ------------------------- Destination Start ------------------------- */
+#destination {
+    margin-top: 106px;
+}
+
+#destination .destination_top p {
+    color: #5E6282;
+}
+
+#destination .destination_top h4 {
+    color: #14183E;
+    margin-top: 8px;
+}
+
+#destination .destination_main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+#destination .destination_main .destination_item {
+    width: 28%;
+    height: 457px;
+    position: relative;
+}
+
+#destination .destination_main .destination_item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 24px;
+}
+
+#destination .destination_main .destination_item .destination_item_details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    padding: 27px 42px 42px 20px;
+    box-sizing: border-box;
+}
+
+#destination .destination_main .destination_item_details .details_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+#destination .destination_main .destination_item_details .details_top p {
+    color: #5E6282;
+}
+
+#destination .destination_main .destination_item_details .details_bottom {
+    display: flex;
+    margin-top: 19px;
+    align-items: center;
+}
+
+#destination .destination_main .destination_item_details .details_bottom i {
+    font-size: 20px;
+}
+
+#destination .destination_main .destination_item_details .details_bottom p {
+    color: #5E6282;
+    margin-left: 14px;
+}
+
+#destination .destination_main .destination_item .destination_hover_img {
+	position: absolute;
+	right: -62px;
+	bottom: 68px;
+	z-index: -1;
+    opacity: 0;
+    transition: all linear .2s;
+}
+
+#destination .destination_main .destination_item .destination_hover_img img {
+    width: 96px;
+    height: auto;
+}
+
+#destination .destination_main .destination_item:hover .destination_hover_img {
+    opacity: 1;
+}
+/* ------------------------- Destination End ------------------------- */
+#trip .trip_main {
+    margin-top: 73px;
+}
+
+#trip .trip_top p {
+    color: #5E6282;
+}
+
+#trip .trip_top h5 {
+    width: 511px;
+    color: #14183E;
+    margin-top: 15px;
+}
+
+#trip .trip_main {
+    display: flex;
+}
+
+#trip .trip_main .trip_left {
+    width: 50%;
+}
+
+#trip .trip_main .trip_right {
+    width: 50%;
+    position: relative;
+}
+
+#trip .trip_main .trip_details {
+    margin-top: 31px;
+}
+
+#trip .trip_main .trip_details .trip_item {
+    display: flex;
+    margin-bottom: 48px;
+}
+
+#trip .trip_main .trip_details .trip_item .trip_icon {
+    width: 47px;
+    margin-top: 8px;
+}
+
+#trip .trip_main .trip_details .trip_item .trip_icon img {
+    width: 100%;
+    display: block;
+}
+
+#trip .trip_main .trip_details .trip_item .trip_item_info {
+    width: 327px;
+    margin-left: 21px;
+}
+
+#trip .trip_main .trip_details .trip_item .trip_item_info h6 {
+    color: #5E6282;
+}
+
+#trip .trip_main .trip_details .trip_item .trip_item_info p {
+    color: #5E6282;
+}
+
+#trip .trip_main .trip_right .trip_right_img {
+    width: 485px;
+    margin-left: 50px;
+    margin-top: 51px;
+}
+
+#trip .trip_main .trip_right .trip_right_img img {
+    width: 100%;
+    display: block;
+}
+
+#trip .trip_main .trip_right .shape {
+	position: absolute;
+	top: -91px;
+	right: 95px;
+	z-index: -1;
+	width: 354px;
+    transition: all linear .3s;
+}
+
+#trip .trip_main .trip_right .shape img {
+    width: 100%;
+    display: block;
+}
+
+#trip .trip_main .trip_right:hover .shape {
+    scale: 1.35;
+}
+/* ------------------------- Trip End ------------------------- */
+
+/* ------------------------- Testimonial Start ------------------------- */
+#testimonial .testimonial_main {
+    margin-top: 75px;
+    display: flex;
+}
+
+#testimonial .testimonial_main .testimonial_left {
+    width: 40%;
+}
+
+#testimonial .testimonial_main .testimonial_right {
+    width: 60%;
+    position: relative;
+}
+
+#testimonial .testimonial_main .testimonial_left .testi_title p {
+    text-transform: uppercase;
+    color: #5E6282;
+}
+
+#testimonial .testimonial_main .testimonial_left .testi_title h5 {
+    color: #14183E;
+    width: 409px;
+    margin-top: 8px;
+    text-transform: capitalize;
+}
+
+#testimonial .testimonial_main .testimonial_left .testi_dots {
+    display: flex;
+    gap: 25px;
+    margin-top: 82px;
+}
+
+#testimonial .testimonial_main .testimonial_left .testi_dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E5E5E5;
+    cursor: pointer;
+}
+
+#testimonial .testimonial_main .testimonial_left .testi_dots .dot:first-child {
+    background-color: #39425D;
+}
+
+#testimonial .testimonial_main .testimonial_right .testi_slider {
+    width: 589px;
+    margin-left: 100px;
+}
+
+#testimonial .testimonial_main .testimonial_right .testi_slider img {
+    width: 100%;
+    display: block;
+}
+
+#testimonial .testimonial_main .testimonial_right .testi_arrow {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+#testimonial .testimonial_main .testimonial_right .testi_arrow i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#testimonial .testimonial_main .testimonial_right .testi_arrow .up {
+    color: #BCB7C2;
+}
+
+#testimonial .testimonial_main .testimonial_right .testi_arrow .down {
+    color: #3E2E4D;
+}
+/* ------------------------- Testimonial End ------------------------- */
+
+/* ------------------------- Companies Start ------------------------- */
+#companies {
+    margin-top: 72px;
+}
+
+#companies h6 {
+    font-size: 40px;
+    color: #14183E;
+}
+
+#companies .companies_logo_wrapper {
+    margin-top: 83px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#companies .companies_logo_wrapper .companies_logo {
+    height: 51px;
+}
+
+#companies .companies_logo_wrapper .companies_logo img {
+    height: 100%;
+    display: block;
+    width: auto;
+}
+/* ------------------------- Companies End ------------------------- */
