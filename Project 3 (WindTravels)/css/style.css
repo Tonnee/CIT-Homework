@@ -195,7 +195,7 @@ nav .dropdown:hover .dropdown_main {
     position: absolute;
     top: 0;
     right: -42px;
-    /* animation: fly 2s linear infinite; */
+    animation: fly 2s linear infinite;
 }
 
 @keyframes fly {
@@ -803,3 +803,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: auto;
 }
 /* ------------------------- Companies End ------------------------- */
+
+/* ------------------------- Subscribe Start ------------------------- */
+#subscribe {
+    margin-top: 140px;
+}
+
+#subscribe .subscribe_main {
+    background: url(../images/subscribe.png) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 79px 155px 78px 156px;
+    text-align: center;
+}
+
+#subscribe .subscribe_main h3 {
+    font-size: 33px;
+    color: #5E6282;
+}
+
+#subscribe .subscribe_main form {
+    margin-top: 74px;
+}
+/* ------------------------- Subscribe End ------------------------- */
