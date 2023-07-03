@@ -194,7 +194,7 @@ nav .dropdown:hover .dropdown_main {
     position: absolute;
     top: 0;
     right: -42px;
-    /* animation: fly 2s linear infinite; */
+    animation: fly 2s linear infinite;
 }
 
 @keyframes fly {
@@ -824,6 +824,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 #subscribe .subscribe_main {
+<<<<<<< HEAD
     background-color: #dfd7f9;
     padding: 79px 155px 78px 155px;
     border-radius: 129px 20px 20px 20px;
@@ -869,3 +870,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #39425D;
 }
 /* ------------------------- Subscribe End ------------------------- */
+=======
+    background: url(../images/subscribe.png) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 79px 155px 78px 156px;
+    text-align: center;
+}
+
+#subscribe .subscribe_main h3 {
+    font-size: 33px;
+    color: #5E6282;
+}
+
+#subscribe .subscribe_main form {
+    margin-top: 74px;
+}
+/* ------------------------- Subscribe End ------------------------- */
+>>>>>>> b1dfba2e68f79e7770ef4f6fe76e13849dd70437
