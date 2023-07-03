@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.font_dm {
+    font-family: "DM Sans", sans-serif;
+}
+
+.font_14 {
+    font-size: 14px;
+}
+
+/* ---------------------- Nav Start ---------------------- */
+nav {
+    padding: 31px 0;
+    background-color: #fff;
+}
+
+nav .nav_wrapper {
+    position: relative;
+}
+
+nav .nav_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+nav .nav_logo {
+    width: 65px;
+}
+
+nav .nav_logo img {
+    width: 100%;
+    display: block;
+}
+
+nav .nav_item ul {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+nav .nav_item ul li a {
+    color: #767676;
+    font-weight: 400;
+    transition: all linear .2s;
+}
+
+nav .nav_item ul li a:hover {
+    color: #262626;
+    font-weight: 700;
+}
+/* ---------------------- Nav End ---------------------- */
+
+/* ---------------------- Filter Start ---------------------- */
+#filter  {
+    background-color: #F5F5F3;
+    padding: 25px 0;
+}
+
+#filter .filter_wrapper {
+    display: flex;
+}
+
+#filter .filter_sort {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+#filter .filter_sort a,
+#filter .filter_sort i {
+    color: #262626;
+}
+
+#filter .filter_search {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#filter .filter_search .filter_box {
+    width: 601px;
+    position: relative;
+}
+
+#filter .filter_search .filter_box input {
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    padding: 0 40px 0 21px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+#filter .filter_search .filter_box input::placeholder {
+    font-family: "DM Sans", sans-serif;
+    color: #C4C4C4;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#filter .filter_search .filter_box a {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    transform:  translateY(-50%);
+}
+
+#filter .filter_search .filter_box a i {
+    color: #262626;
+    font-size: 16px;
+}
+
+#filter .filter_cart {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    justify-content: end;
+}
+
+#filter .filter_cart .cart_box {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+#filter .filter_cart i {
+    color: #262626;
+    font-size: 16px;
+}
