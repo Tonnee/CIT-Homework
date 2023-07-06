@@ -14,7 +14,7 @@ a {
 }
 
 .container {
-    width: 1320px;
+    width: 1600px;
     margin: 0 auto;
 }
 
@@ -26,11 +26,49 @@ a {
     font-size: 14px;
 }
 
+.font_16 {
+    font-size: 16px;
+}
+
+.font_20 {
+    font-size: 20px;
+}
+
+.font_39 {
+    font-size: 39px;
+}
+
+.font_40 {
+    font-size: 40px;
+}
+
+.font_400 {
+    font-weight: 400;
+}
+
+.font_700 {
+    font-weight: 700;
+}
+
+.font_dark {
+    color: #262626;
+}
+
 .dark_btn {
     padding: 16px 58px;
     background-color: #262626;
     font-family: "DM Sans", sans-serif;
     color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.new_btn {
+    padding: 8px 31px;
+    background-color: #262626;
+    font-family: "DM Sans", sans-serif;
+    color: #fff !important;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
@@ -265,6 +303,7 @@ nav .nav_item ul li a:hover {
     background-color: #fff;
     padding: 30px 0;
     box-sizing: border-box;
+    border: 1px solid #F0F0F0;
 }
 
 #service .service_wrapper {
@@ -285,3 +324,325 @@ nav .nav_item ul li a:hover {
     margin-right: 15px;
 }
 /* ---------------------- Service End ---------------------- */
+
+/* ---------------------- Sale Start ---------------------- */
+#sale {
+    margin-top: 140px;
+}
+
+#sale .sale_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sale .sale_main .sale_left {
+    width: 49%;
+    height: 780px;
+    background: url(../images/sale1.png) no-repeat center;
+    background-size: cover;
+}
+
+#sale .sale_main .sale_left .sale_left_inner {
+    padding: 64px 72px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#sale .sale_main .sale_right {
+    width: 48%;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sale .sale_main .sale_right .sale_right_top {
+    width: 100%;
+    height: 47%;
+    background: url(../images/sale2.png) no-repeat center;
+    background-size: cover;
+}
+
+#sale .sale_main .sale_right .sale_right_bottom {
+    width: 100%;
+    height: 47%;
+    background: url(../images/sale3.png) no-repeat center;
+    background-size: cover;
+}
+
+#sale .sale_main h3 {
+    color: rgba(38, 38, 38, 0.70);
+    margin-top: 36px;
+}
+
+#sale .sale_main .dark_btn {
+    margin-top: 49px;
+}
+
+#sale .sale_main .sale_right .sale_right_top_inner,
+#sale .sale_main .sale_right .sale_right_bottom_inner {
+    padding: 66px 53px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* ---------------------- Sale End ---------------------- */
+
+/* ---------------------- New Arrivals Start ---------------------- */
+#new_arrivals {
+    margin-top: 128px;
+}
+
+.product_main {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.product_main .product_box {
+    width: 23%;
+}
+
+.product_main .product_img {
+    width: 100%;
+    height: 376px;
+    position: relative;
+}
+
+.product_main .product_box .product_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product_main .product_box .product_info {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product_main .product_box p {
+    color: #767676;
+}
+
+.product_main .product_box .product_color {
+    margin-top: 15px;
+}
+
+.product_main .product_box .product_img .new_tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.product_main .product_box .product_img .product_action {
+    background-color: #fff;
+    width: 100%;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    opacity: 0;
+    transition: all linear .2s;
+}
+
+.product_main .product_box .product_img .product_action a {
+    color: #767676;
+    margin-bottom: 21px;
+    display: block;
+    transition: all linear .2s;
+}
+
+.product_main .product_box .product_img .product_action a i {
+    color: #262626;
+    margin-left: 15px;
+}
+
+.product_main .product_box .product_img .product_action a:hover {
+    color: #262626;
+    font-weight: 700;
+}
+
+.product_main .product_box .product_img:hover .product_action {
+    opacity: 1;
+}
+
+.product_main .arrow_left, 
+.product_main .arrow_right {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+}
+
+.product_main .arrow_left {
+    left: 6px;
+}
+
+.product_main .arrow_right {
+    right: 6px;
+}
+/* ---------------------- New Arrivals End ---------------------- */
+
+/* ---------------------- Best Sellers Start ---------------------- */
+#best_sellers {
+    margin-top: 118px;
+}
+/* ---------------------- Best Sellers End ---------------------- */
+
+/* ---------------------- Of the year Start ---------------------- */
+#of_the_year {
+    margin-top: 130px;
+}
+
+#of_the_year .of_the_year_main {
+    display: flex;
+}
+
+#of_the_year .of_the_year_main .of_the_year_img {
+    height: 370px;
+    width: 40%;
+}
+
+#of_the_year .of_the_year_main .of_the_year_img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+#of_the_year .of_the_year_main .of_the_year_info {
+    height: 370px;
+    width: 60%;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#of_the_year .of_the_year_main .of_the_year_info p {
+    line-height: 30px;
+    margin-top: 38px;
+    width: 511px;
+}
+
+#of_the_year .of_the_year_main .of_the_year_info a {
+    margin-top: 66px;
+}
+/* ---------------------- Of the year End ---------------------- */
+
+/* ---------------------- Special Offers Start ---------------------- */
+#special_offers {
+    margin-top: 128px;
+}
+/* ---------------------- Special Offers End ---------------------- */
+
+/* ---------------------- Footer Start ---------------------- */
+footer {
+    margin-top: 140px;
+    background-color: #F5F5F3;
+    padding: 55px 0 59px 0;
+}
+
+footer .footer_wrapper {
+    display: flex;
+}
+
+footer .footer_wrapper .footer_main {
+    width: 78%;
+    display: flex;
+}
+
+footer .footer_wrapper .footer_logo {
+    width: 22%;
+}
+
+footer .footer_wrapper .footer_main .footer_links {
+    width: 20%;
+}
+
+footer .footer_wrapper .footer_main .footer_info {
+    width: 40%;
+}
+
+footer .footer_wrapper .footer_main .footer_links h6 {
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+footer .footer_wrapper .footer_main .footer_links ul li a {
+    color: #6d6d6d;
+    line-height: 23px;
+    margin-bottom: 6px;
+    transition: all linear .2s;
+}
+
+footer .footer_wrapper .footer_main .footer_links ul li a:hover {
+    color: #262626;
+}
+
+footer .footer_wrapper .footer_main .footer_info .contact {
+    margin-top: 6px;
+}
+
+footer .footer_wrapper .footer_main .footer_info .location {
+    margin-top: 15px;
+    color: #6d6d6d;
+}
+
+footer .footer_wrapper .footer_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .footer_wrapper .footer_logo .logo_box {
+    width: 122px;
+}
+
+footer .footer_wrapper .footer_logo .logo_box img {
+    width: 100%;
+    display: block;
+}
+
+footer .footer_wrapper .footer_copy p {
+    color: #6d6d6d;
+}
+
+footer .footer_wrapper .footer_main .footer_social {
+    margin-top: 65px;
+}
+
+footer .footer_wrapper .footer_main .footer_social a {
+    margin-right: 26px;
+}
+
+footer .footer_wrapper .footer_main .footer_social a i {
+    color: #262626;
+}
+/* ---------------------- Footer End ---------------------- */
+
+
