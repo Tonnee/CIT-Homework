@@ -828,4 +828,43 @@ footer .footer_wrapper .footer_main .footer_social a i {
     width: 31%;
     margin-bottom: 50px;
 }
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination ul {
+    display: flex;
+    gap: 15px;
+}
+
+.pagination ul li a  {
+    color: #767676;
+    padding: 9px 15px 9px 16px;
+    background-color: #fff;
+    border: 1px solid #F0F0F0;
+    transition: all linear .2s;
+}
+
+.pagination ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination ul li .active {
+    background-color: #262626;
+    color: #fff;
+}
+
+.pagination ul li .dots {
+    border: none;
+}
+
+.pagination ul li .dots:hover {
+    background-color: #fff;
+}
+
+.pagination p {
+    color: #767676;
+}
 /* =================== Products page End =================== */
