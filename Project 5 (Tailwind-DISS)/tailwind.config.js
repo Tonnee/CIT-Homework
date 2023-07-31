@@ -4,8 +4,10 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "font-dark": "#333333",
-                "font-orange": "#FFBC42",
+                dark: "#333333",
+                orange: "#FFBC42",
+                blue: "#2E3094",
+                "light-lime": "rgba(37, 171, 92, 0.9)",
             },
         },
         fontFamily: {
