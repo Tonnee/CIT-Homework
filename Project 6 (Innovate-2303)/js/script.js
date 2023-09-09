@@ -18,7 +18,7 @@ tailwind.config = {
                 highlight: "#fdb400",
                 tag: "#FF7364",
                 line: "#DCE7FE",
-                'sky-blue': "#2290F5",
+                "sky-blue": "#2290F5",
                 "green-dark": "#28AE61",
                 "icon-red-light": "#FAEAE8",
                 "icon-blue-light": "#E8F2FA",
