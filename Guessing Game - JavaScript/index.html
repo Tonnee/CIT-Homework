@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Guessing Game - JavaScript</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="main">
+            <button class="restart">Play Agian</button>
+            <p class="reveal">Player 1 input: <span class="reveal-input">&#128526</span></p>
+            <div class="field-1">
+                <h2>Player 1</h2>
+                <input
+                    type="text"
+                    placeholder="Type a Number"
+                    class="input-player-1"
+                />
+                <button class="btn btn-player-1">Start</button>
+                <p class="error">Give a number</p>
+            </div>
+
+            <div class="field-2">
+                <h2>Player 2</h2>
+                <input
+                    type="text"
+                    placeholder="Type a Number"
+                    class="input-player-2"
+                />
+                <button class="btn btn-player-2">Play</button>
+                <p class="wait2">Waiting for Player 2</p>
+                <p class="chance">
+                    Chance: <span class="chance-value">5</span>
+                </p>
+            </div>
+
+            <p class="result"></p>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
