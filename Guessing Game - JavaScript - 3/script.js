@@ -68,6 +68,7 @@ btnPlayer2.addEventListener("click", function () {
                         field3.style.display = "none";
                     }
                 } else {
+                    console.log("Here");
                     result.innerHTML = "Player 2 Wins!";
                     revealInput.innerHTML = inputPlayer1.value;
                     field1.style.display = "none";
