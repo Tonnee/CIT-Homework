@@ -13,8 +13,6 @@ let field1 = document.querySelector(".field-1");
 let field2 = document.querySelector(".field-2");
 let field3 = document.querySelector(".field-3");
 let restart = document.querySelector(".restart");
-let wait2 = document.querySelector(".wait2");
-let wait3 = document.querySelector(".wait3");
 let revealInput = document.querySelector(".reveal-input");
 let status2 = document.querySelector(".player2Status");
 let sp2 = document.querySelector(".status-p-2");
@@ -58,44 +56,54 @@ btnPlayer2.addEventListener("click", function () {
                         console.log("2 & 3 match");
                         console.log("2 & 3 wins");
                         result.innerHTML = "Player 2 & Player 3 Wins!";
+                        revealInput.innerHTML = inputPlayer1.value;
+                        field1.style.display = "none";
+                        field2.style.display = "none";
+                        field3.style.display = "none";
+                    } else {
+                        result.innerHTML = "Player 1 Wins!";
+                        revealInput.innerHTML = inputPlayer1.value;
                         field1.style.display = "none";
                         field2.style.display = "none";
                         field3.style.display = "none";
                     }
                 } else {
-                    console.log("Here");
-                    console.log("1 Wins");
-                    result.innerHTML = "Player 1 Wins!";
+                    result.innerHTML = "Player 2 Wins!";
+                    revealInput.innerHTML = inputPlayer1.value;
                     field1.style.display = "none";
                     field2.style.display = "none";
                     field3.style.display = "none";
                 }
             });
         }
-    } else if (countPlayer3 > 1) {
-        console.log("2 did not match");
-        field3.style.display = "block";
-        field2.style.display = "none";
-        btnPlayer3.addEventListener("click", function () {
-            chanceValue3.innerHTML = countPlayer3;
-            if (countPlayer3 > 1) {
-                countPlayer3--;
-                if (inputPlayer1.value == inputPlayer3.value) {
-                    console.log("3 match", countPlayer3);
-                    console.log("player 3 wins!");
-                    result.innerHTML = "Player 3 Wins!";
-                    field1.style.display = "none";
-                    field2.style.display = "none";
-                    field3.style.display = "none";
+    } else {
+        if (countPlayer3 > 1) {
+            console.log("2 did not match");
+            field3.style.display = "block";
+            field2.style.display = "none";
+            btnPlayer3.addEventListener("click", function () {
+                chanceValue3.innerHTML = countPlayer3;
+                if (countPlayer3 > 1) {
+                    countPlayer3--;
+                    if (inputPlayer1.value == inputPlayer3.value) {
+                        console.log("3 match", countPlayer3);
+                        console.log("player 3 wins!");
+                        result.innerHTML = "Player 3 Wins!";
+                        revealInput.innerHTML = inputPlayer1.value;
+                        field1.style.display = "none";
+                        field2.style.display = "none";
+                        field3.style.display = "none";
+                    }
                 }
-            } else {
-                console.log("player 1 wins");
-                result.innerHTML = "Player 1 Wins!";
-                field1.style.display = "none";
-                field2.style.display = "none";
-                field3.style.display = "none";
-            }
-        });
+            });
+        } else {
+            console.log("player 1 wins");
+            result.innerHTML = "Player 1 Wins!";
+            revealInput.innerHTML = inputPlayer1.value;
+            field1.style.display = "none";
+            field2.style.display = "none";
+            field3.style.display = "none";
+        }
     }
 });
 
