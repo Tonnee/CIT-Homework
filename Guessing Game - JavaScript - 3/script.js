@@ -14,10 +14,6 @@ let field2 = document.querySelector(".field-2");
 let field3 = document.querySelector(".field-3");
 let restart = document.querySelector(".restart");
 let revealInput = document.querySelector(".reveal-input");
-let status2 = document.querySelector(".player2Status");
-let sp2 = document.querySelector(".status-p-2");
-let status3 = document.querySelector(".player3Status");
-let sp3 = document.querySelector(".status-p-3");
 let countPlayer2 = 5;
 let countPlayer3 = 5;
 
@@ -40,70 +36,225 @@ btnPlayer1.addEventListener("click", function () {
     }
 });
 
+// btnPlayer2.addEventListener("click", function () {
+//     if (countPlayer2 > 1) {
+//         //true
+//         countPlayer2--; //countPlayer2 = 5
+//         chanceValue2.innerHTML = countPlayer2; //5
+//         if (inputPlayer1.value == inputPlayer2.value) {
+//             console.log(
+//                 "check 2--------------------------------------",
+//                 countPlayer2
+//             );
+//             //if 2 match
+//             //true
+//             console.log("***2 match", countPlayer3); // 2 won
+//             field3.style.display = "block";
+//             field2.style.display = "none";
+//             chanceValue3.innerHTML = countPlayer3;
+//             btnPlayer3.addEventListener("click", function () {
+//                 if (countPlayer3 > 1) {
+//                     //true
+//                     countPlayer3--; //countPlayer3 =5
+//                     chanceValue3.innerHTML = countPlayer3; //5
+//                     if (inputPlayer1.value == inputPlayer3.value) {
+//                         console.log(
+//                             "check 3--------------------------------------",
+//                             countPlayer3
+//                         );
+//                         //if 3 match
+//                         //true
+//                         console.log("2 & 3 match");
+//                         console.log("2 & 3 wins");
+//                         result.innerHTML = "Player 2 & Player 3 Wins!"; //2 & 3 Won
+//                         revealInput.innerHTML = inputPlayer1.value;
+//                         field1.style.display = "none";
+//                         field2.style.display = "none";
+//                         field3.style.display = "none";
+//                     } else {
+//                         //false
+//                         console.log("3 did not match");
+//                         console.log(countPlayer3);
+//                         // -----------------------------
+//                         if (countPlayer3 > 1) {
+//                             countPlayer3--; //3
+//                             chanceValue3.innerHTML = countPlayer3; //3
+//                             console.log("oops", countPlayer3);
+//                             if (inputPlayer1.value == inputPlayer3.value) {
+//                                 console.log("oops here", countPlayer3);
+//                                 result.innerHTML = "Player 3 Wins!"; //3 lost
+//                                 revealInput.innerHTML = inputPlayer1.value;
+//                                 field1.style.display = "none";
+//                                 field2.style.display = "none";
+//                                 field3.style.display = "none";
+//                             }
+//                         }
+//                         else {
+//                             result.innerHTML = "Player 2 Wins!"; //2 Won
+//                             revealInput.innerHTML = inputPlayer1.value;
+//                             field1.style.display = "none";
+//                             field2.style.display = "none";
+//                             field3.style.display = "none";
+//                         }
+//                     }
+//                 } else {
+//                     //false
+//                     console.log("Here");
+//                     result.innerHTML = "Player 2 Wins!"; // 2 Won
+//                     revealInput.innerHTML = inputPlayer1.value;
+//                     field1.style.display = "none";
+//                     field2.style.display = "none";
+//                     field3.style.display = "none";
+//                 }
+//             });
+//         }
+//     } else {
+//         //False , 2 Lost
+//         // ---------------------------------------
+//         countPlayer3 = 5;
+//         console.log("2 did not match", countPlayer3);
+//         field3.style.display = "block";
+//         field2.style.display = "none";
+//         chanceValue3.innerHTML = countPlayer3;
+//         btnPlayer3.addEventListener("click", function () {
+//             if (countPlayer3 > 1) {
+//                 //true
+//                 countPlayer3--; //countPlayer3 = 5
+//                 chanceValue3.innerHTML = countPlayer3; // 5
+//                 if (inputPlayer1.value == inputPlayer3.value) {
+//                     //true
+//                     console.log("3 match", countPlayer3);
+//                     console.log("player 3 wins!"); // 3 Won
+//                     result.innerHTML = "Player 3 Wins!";
+//                     revealInput.innerHTML = inputPlayer1.value;
+//                     field1.style.display = "none";
+//                     field2.style.display = "none";
+//                     field3.style.display = "none";
+//                 }
+//             } else {
+//                 //False
+//                 console.log("------------------- Here 128");
+//                 console.log(countPlayer3);
+//                 if (countPlayer3 > 1) {
+//                     // ------------------------------------------
+//                     countPlayer3--; //countPlayer3 = 5
+//                     console.log("Here 123", countPlayer3);
+//                     chanceValue3.innerHTML = countPlayer3; // 5
+//                     if (inputPlayer1.value == inputPlayer3.value) {
+//                         //true
+//                         console.log("3 match", countPlayer3);
+//                         console.log("player 3 wins!"); // 3 Won
+//                         result.innerHTML = "Player 3 Wins!";
+//                         revealInput.innerHTML = inputPlayer1.value;
+//                         field1.style.display = "none";
+//                         field2.style.display = "none";
+//                         field3.style.display = "none";
+//                     }
+//                 } else {
+//                     result.innerHTML = "Player 1 Wins!";
+//                     revealInput.innerHTML = inputPlayer1.value;
+//                     field1.style.display = "none";
+//                     field2.style.display = "none";
+//                     field3.style.display = "none";
+//                 }
+//             }
+//         });
+//     }
+//     //     else {
+//     //        //False
+//     //        console.log('Now Here');
+//     //        console.log("player 1 wins"); // 1 Won
+//     //        result.innerHTML = "Player 1 Wins!";
+//     //        revealInput.innerHTML = inputPlayer1.value;
+//     //        field1.style.display = "none";
+//     //        field2.style.display = "none";
+//     //        field3.style.display = "none";
+//     //    }
+// });
+
 btnPlayer2.addEventListener("click", function () {
     if (countPlayer2 > 1) {
         countPlayer2--;
-        chanceValue2.innerHTML = countPlayer2;
         if (inputPlayer1.value == inputPlayer2.value) {
-            console.log("2 match");
+            console.log("2 Match");
             field3.style.display = "block";
             field2.style.display = "none";
+            chanceValue2.innerHTML = countPlayer2;
+            chanceValue3.innerHTML = countPlayer3;
             btnPlayer3.addEventListener("click", function () {
-                chanceValue3.innerHTML = countPlayer3;
                 if (countPlayer3 > 1) {
                     countPlayer3--;
                     if (inputPlayer1.value == inputPlayer3.value) {
-                        console.log("2 & 3 match");
-                        console.log("2 & 3 wins");
+                        console.log("3 Match");
+                        console.log("2 & 3 Wins");
                         result.innerHTML = "Player 2 & Player 3 Wins!";
-                        revealInput.innerHTML = inputPlayer1.value;
-                        field1.style.display = "none";
-                        field2.style.display = "none";
-                        field3.style.display = "none";
-                    } else {
-                        result.innerHTML = "Player 1 Wins!";
                         revealInput.innerHTML = inputPlayer1.value;
                         field1.style.display = "none";
                         field2.style.display = "none";
                         field3.style.display = "none";
                     }
                 } else {
-                    console.log("Here");
-                    result.innerHTML = "Player 2 Wins!";
-                    revealInput.innerHTML = inputPlayer1.value;
-                    field1.style.display = "none";
-                    field2.style.display = "none";
-                    field3.style.display = "none";
+                    if (countPlayer3 > 1) {
+                        countPlayer3--;
+                        chanceValue3.innerHTML = countPlayer3;
+                        if (inputPlayer1.value != inputPlayer3) {
+                            console.log("1 Wins");
+                            result.innerHTML = "Player 1 Wins!";
+                            revealInput.innerHTML = inputPlayer1.value;
+                            field1.style.display = "none";
+                            field2.style.display = "none";
+                            field3.style.display = "none";
+                        }
+                    }
                 }
             });
-        }
-    } else {
-        if (countPlayer3 > 1) {
-            console.log("2 did not match");
-            field3.style.display = "block";
-            field2.style.display = "none";
-            btnPlayer3.addEventListener("click", function () {
-                chanceValue3.innerHTML = countPlayer3;
-                if (countPlayer3 > 1) {
-                    countPlayer3--;
-                    if (inputPlayer1.value == inputPlayer3.value) {
-                        console.log("3 match", countPlayer3);
-                        console.log("player 3 wins!");
-                        result.innerHTML = "Player 3 Wins!";
+        } else {
+            if (inputPlayer1.value == inputPlayer3.value) {
+                console.log("3 Wins");
+                result.innerHTML = "Player 3 Wins!";
+                revealInput.innerHTML = inputPlayer1.value;
+                field1.style.display = "none";
+                field2.style.display = "none";
+                field3.style.display = "none";
+            } else {
+                console.log(countPlayer2);
+                if (countPlayer2 > 1) {
+                    chanceValue2.innerHTML = countPlayer2;
+                    if (inputPlayer1 == inputPlayer2) {
+                        console.log("2 Wins");
+                        result.innerHTML = "Player 2 Wins!";
                         revealInput.innerHTML = inputPlayer1.value;
                         field1.style.display = "none";
                         field2.style.display = "none";
                         field3.style.display = "none";
                     }
+                } else {
+                    field3.style.display = "block";
+                    field2.style.display = "none";
+                    chanceValue3.innerHTML = countPlayer3;
+                    btnPlayer3.addEventListener("click", function () {
+                        if (countPlayer3 > 1) {
+                            countPlayer3--;
+                            chanceValue3.innerHTML = countPlayer3;
+                            console.log(countPlayer3);
+                            if (inputPlayer1.value == inputPlayer3.value) {
+                                console.log("3 Wins");
+                                result.innerHTML = "Player 3 Wins!";
+                                revealInput.innerHTML = inputPlayer1.value;
+                                field1.style.display = "none";
+                                field2.style.display = "none";
+                                field3.style.display = "none";
+                            }
+                        }
+                    });
                 }
-            });
+            }
+        }
+    } else {
+        if (inputPlayer1.value == inputPlayer3.value) {
+            console.log("3 Wins");
         } else {
-            console.log("player 1 wins");
-            result.innerHTML = "Player 1 Wins!";
-            revealInput.innerHTML = inputPlayer1.value;
-            field1.style.display = "none";
-            field2.style.display = "none";
-            field3.style.display = "none";
+            console.log("1 Wins");
         }
     }
 });
@@ -111,13 +262,15 @@ btnPlayer2.addEventListener("click", function () {
 restart.addEventListener("click", function () {
     inputPlayer1.value = "";
     inputPlayer2.value = "";
+    chanceValue2.innerHTML = "";
+    chanceValue3.innerHTML = "";
     inputPlayer3.value = "";
     field1.style.display = "block";
     field2.style.display = "none";
     field3.style.display = "none";
     result.innerHTML = "";
-    countPlayer2 = 5;
     countPlayer3 = 5;
+    countPlayer2 = 5;
     error.innerHTML = "Give a number";
     revealInput.innerHTML = "&#128526";
 });
