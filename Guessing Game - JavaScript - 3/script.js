@@ -85,7 +85,7 @@ btnPlayer2.addEventListener("click", function () {
         field3.style.display = "block";
         field2.style.display = "none";
         chanceValue3.innerHTML = countPlayer3;
-        countPlayer3 = 6;
+        countPlayer3 = 5;
         btnPlayer3.addEventListener("click", function () {
             if (countPlayer3 > 1) {
                 countPlayer3--;
