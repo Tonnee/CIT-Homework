@@ -67,6 +67,7 @@ btnPlayer2.addEventListener("click", function () {
             console.log("player 2 wins");
             field2.style.display = "none";
             field3.style.display = "block";
+            chanceValue3.innerHTML = countPlayer3;
             btnPlayer3.addEventListener("click", function () {
                 console.log(countPlayer3);
                 if (countPlayer3 > 1) {
@@ -77,6 +78,7 @@ btnPlayer2.addEventListener("click", function () {
                         console.log("Player 3 wins");
                         field3.style.display = "none";
                         field4.style.display = "block";
+                        chanceValue4.innerHTML = countPlayer4;
                         btnPlayer4.addEventListener("click", function () {
                             console.log(countPlayer4);
                             if (countPlayer4 > 1) {
@@ -85,11 +87,11 @@ btnPlayer2.addEventListener("click", function () {
                                 if (guess == inputPlayer4.value) {
                                     // 4 Match
                                     console.log("Player 4 Wins");
-                                    console.log("Player 2, 3, 4 wins");
                                     field4.style.display = "none";
+                                    result.innerHTML = 'Player 2, 3, 4 Wins!'
                                 } else {
                                     // 4 did not match
-                                    console.log("Player 2,3 wins, 4 lose ");
+                                    result.innerHTML = "Player 2, 3 Wins!";
                                 }
                             }
                         });
@@ -112,6 +114,7 @@ btnPlayer2.addEventListener("click", function () {
                                 field4.style.display = "none";
                             } else {
                                 // 4 did not match
+                                field4.style.display = "none";
                                 console.log("Player 2 wins");
                             }
                         }
@@ -125,9 +128,8 @@ btnPlayer2.addEventListener("click", function () {
         console.log("player 2 lose");
         field2.style.display = "none";
         field3.style.display = "block";
-        chanceValue3.innerHTML = '5';
+        chanceValue3.innerHTML = "5";
         btnPlayer3.addEventListener("click", function () {
-            console.log(countPlayer3, countPlayer3);
             if (countPlayer3 > 1) {
                 countPlayer3--;
                 chanceValue3.innerHTML = countPlayer3;
@@ -149,25 +151,27 @@ btnPlayer2.addEventListener("click", function () {
                             }
                         }
                     });
-                } else {
-                    // 3 did not match, 2 did not match
-                    console.log("Player 2, 3 lose");
-                    field3.style.display = "none";
-                    field4.style.display = "block";
-                    btnPlayer4.addEventListener("click", function () {
-                        if (countPlayer4 > 1) {
-                            countPlayer4--;
-                            chanceValue4.innerHTML = countPlayer4;
-                            // 4 match
-                            if (guess == inputPlayer4.value) {
-                                console.log("Player 4 wins");
-                            } else {
-                                // 2, 3, 4 did not match
-                                console.log("Player 1 wins");
-                            }
-                        }
-                    });
                 }
+            } else {
+                // 3 did not match, 2 did not match
+                console.log("Player 2, 3 lose");
+                field3.style.display = "none";
+                field4.style.display = "block";
+                btnPlayer4.addEventListener("click", function () {
+                    if (countPlayer4 > 1) {
+                        countPlayer4--;
+                        chanceValue4.innerHTML = countPlayer4;
+                        // 4 match
+                        if (guess == inputPlayer4.value) {
+                            field4.style.display = "none";
+                            console.log("Player 4 wins");
+                        } else {
+                            // 2, 3, 4 did not match
+                            console.log("Player 1 wins");
+                            field4.style.display = "none";
+                        }
+                    }
+                });
             }
         });
     }
@@ -176,9 +180,11 @@ btnPlayer2.addEventListener("click", function () {
 restart.addEventListener("click", function () {
     inputPlayer1.value = "";
     inputPlayer2.value = "";
+    inputPlayer3.value = "";
+    inputPlayer4.value = "";
     chanceValue2.innerHTML = "";
     chanceValue3.innerHTML = "";
-    inputPlayer3.value = "";
+    chanceValue4.innerHTML = "";
     field1.style.display = "block";
     field2.style.display = "none";
     field3.style.display = "none";
@@ -186,7 +192,7 @@ restart.addEventListener("click", function () {
     result.innerHTML = "";
     countPlayer2 = 5;
     countPlayer3 = 5;
-    countPlayer3 = 5;
+    countPlayer4 = 5;
     error.innerHTML = "Give a number";
     revealInput.innerHTML = "&#128526";
 });
