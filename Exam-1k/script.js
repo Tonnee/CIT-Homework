@@ -9,6 +9,13 @@ let btnPlayer3 = document.querySelector(".btn-player-3");
 let btnPlayer4 = document.querySelector(".btn-player-4");
 
 let error = document.querySelector(".error");
+let error1 = "Give a Number";
+let error2 = "String or symbol not allowed";
+let error3 = "Number should be between 1 to 10";
+let typeText = "";
+let textCount = -1;
+error.innerHTML = "";
+let cancel = document.querySelector(".cancelBtn");
 
 let guess = "";
 
@@ -30,9 +37,28 @@ let result = document.querySelector(".result");
 let revealInput = document.querySelector(".reveal-input");
 let restart = document.querySelector(".restart");
 
+function typeJs() {
+    textCount++;
+    error.innerHTML += typeText.charAt(textCount);
+}
+
+function refreshPage() {
+    window.location.reload();
+}
+
 btnPlayer1.addEventListener("click", function () {
     if (inputPlayer1.value == "") {
-        error.innerHTML = "Give a number";
+        error.innerHTML = "";
+        typeText = error1;
+        setInterval(function () {
+            typeJs();
+        }, 100);
+        cancel.style.display = "block";
+        console.log("1");
+        cancel.addEventListener("click", function () {
+            error.innerHTML = "";
+            cancel.style.display = "none";
+        });
     } else if (inputPlayer1.value - 1 >= 0) {
         if (inputPlayer1.value <= 10 && inputPlayer1.value >= 1) {
             for (let i = 0; i <= 10; i++) {
@@ -48,12 +74,42 @@ btnPlayer1.addEventListener("click", function () {
             field3.style.display = "none";
             field1.style.display = "none";
         } else if (inputPlayer1.value > 10 || inputPlayer1.value <= 0) {
-            error.innerHTML = "Number should be between 1 to 10";
+            console.log("3");
+            error.innerHTML = "";
+            typeText = error3;
+            setInterval(function () {
+                typeJs();
+            }, 100);
+            cancel.style.display = "block";
+            cancel.addEventListener("click", function () {
+                error.innerHTML = "";
+                cancel.style.display = "none";
+            });
         }
     } else if (!Boolean(inputPlayer1.value - 1)) {
-        error.innerHTML = "String or symbol not allowed";
+        console.log("2");
+        error.innerHTML = "";
+        typeText = error2;
+        setInterval(function () {
+            typeJs();
+        }, 100);
+        cancel.style.display = "block";
+        cancel.addEventListener("click", function () {
+            error.innerHTML = "";
+            cancel.style.display = "none";
+        });
     } else {
-        error.innerHTML = "Number should be between 1 to 10";
+        console.log("4");
+        error.innerHTML = "";
+        typeText = error3;
+        setInterval(function () {
+            typeJs();
+        }, 100);
+        cancel.style.display = "block";
+        cancel.addEventListener("click", function () {
+            error.innerHTML = "";
+            cancel.style.display = "none";
+        });
     }
 });
 
@@ -207,6 +263,7 @@ restart.addEventListener("click", function () {
     countPlayer2 = 5;
     countPlayer3 = 5;
     countPlayer4 = 5;
-    error.innerHTML = "Give a number";
+    error.innerHTML = "";
     revealInput.innerHTML = "&#128526";
+    refreshPage();
 });
