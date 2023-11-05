@@ -42,6 +42,10 @@ function typeJs() {
     error.innerHTML += typeText.charAt(textCount);
 }
 
+function inputChange() {
+    console.log(inputPlayer1.value);
+}
+
 function refreshPage() {
     window.location.reload();
 }
@@ -53,12 +57,13 @@ btnPlayer1.addEventListener("click", function () {
         setInterval(function () {
             typeJs();
         }, 100);
-        cancel.style.display = "block";
         console.log("1");
+        cancel.style.display = "block";
         cancel.addEventListener("click", function () {
             error.innerHTML = "";
             cancel.style.display = "none";
         });
+        inputChange();
     } else if (inputPlayer1.value - 1 >= 0) {
         if (inputPlayer1.value <= 10 && inputPlayer1.value >= 1) {
             for (let i = 0; i <= 10; i++) {
@@ -85,6 +90,7 @@ btnPlayer1.addEventListener("click", function () {
                 error.innerHTML = "";
                 cancel.style.display = "none";
             });
+            inputChange();
         }
     } else if (!Boolean(inputPlayer1.value - 1)) {
         console.log("2");
@@ -98,6 +104,7 @@ btnPlayer1.addEventListener("click", function () {
             error.innerHTML = "";
             cancel.style.display = "none";
         });
+        inputChange();
     } else {
         console.log("4");
         error.innerHTML = "";
@@ -110,6 +117,7 @@ btnPlayer1.addEventListener("click", function () {
             error.innerHTML = "";
             cancel.style.display = "none";
         });
+        inputChange();
     }
 });
 
