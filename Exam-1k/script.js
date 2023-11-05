@@ -69,9 +69,9 @@ btnPlayer2.addEventListener("click", function () {
             field3.style.display = "block";
             chanceValue3.innerHTML = countPlayer3;
             btnPlayer3.addEventListener("click", function () {
-                console.log(countPlayer3);
                 if (countPlayer3 > 1) {
                     countPlayer3--;
+                    console.log(countPlayer3, guess);
                     chanceValue3.innerHTML = countPlayer3;
                     if (guess == inputPlayer3.value) {
                         // 3 Match
@@ -80,43 +80,47 @@ btnPlayer2.addEventListener("click", function () {
                         field4.style.display = "block";
                         chanceValue4.innerHTML = countPlayer4;
                         btnPlayer4.addEventListener("click", function () {
-                            console.log(countPlayer4);
                             if (countPlayer4 > 1) {
                                 countPlayer4--;
                                 chanceValue4.innerHTML = countPlayer4;
+                                console.log(countPlayer4, guess);
                                 if (guess == inputPlayer4.value) {
                                     // 4 Match
                                     console.log("Player 4 Wins");
                                     field4.style.display = "none";
-                                    result.innerHTML = 'Player 2, 3, 4 Wins!'
-                                } else {
-                                    // 4 did not match
-                                    result.innerHTML = "Player 2, 3 Wins!";
+                                    result.innerHTML = "Player 2, 3, 4 Wins!";
+                                    console.log("Player 2, 3, 4 Wins!");
                                 }
-                            }
-                        });
-                    } else {
-                        // 3 did not match
-                        console.log("Player 2, 4 Wins, Player 3 lose");
-                    }
-                } else {
-                    // 3 did not match, 2 Match
-                    field3.style.display = "none";
-                    field4.style.display = "block";
-                    btnPlayer4.addEventListener("click", function () {
-                        console.log(countPlayer4);
-                        if (countPlayer4 > 1) {
-                            countPlayer4--;
-                            chanceValue4.innerHTML = countPlayer4;
-                            if (guess == inputPlayer4.value) {
-                                // 4 Match
-                                console.log("Player 2, 4 wins");
-                                field4.style.display = "none";
                             } else {
                                 // 4 did not match
                                 field4.style.display = "none";
-                                console.log("Player 2 wins");
+                                result.innerHTML = "Player 2, 3 Wins!";
+                                console.log("Player 2, 3 Wins!");
                             }
+                        });
+                    }
+                } else {
+                    console.log();
+                    // 3 did not match, 2 Match
+                    field3.style.display = "none";
+                    field4.style.display = "block";
+                    chanceValue4.innerHTML = countPlayer4;
+                    btnPlayer4.addEventListener("click", function () {
+                        if (countPlayer4 > 1) {
+                            countPlayer4--;
+                            chanceValue4.innerHTML = countPlayer4;
+                            console.log(countPlayer4, guess);
+                            if (guess == inputPlayer4.value) {
+                                // 4 Match
+                                field4.style.display = "none";
+                                result.innerHTML = "Player 2, 4 Wins!";
+                                console.log("Player 2, 4 Wins!");
+                            }
+                        } else {
+                            // 4 did not match
+                            field4.style.display = "none";
+                            result.innerHTML = "Player 2 Wins!";
+                            console.log("Player 2 Wins!");
                         }
                     });
                 }
@@ -124,31 +128,37 @@ btnPlayer2.addEventListener("click", function () {
         }
     } else {
         // 2 did not match
-        console.log(countPlayer2);
         console.log("player 2 lose");
         field2.style.display = "none";
         field3.style.display = "block";
-        chanceValue3.innerHTML = "5";
+        chanceValue3.innerHTML = countPlayer3;
         btnPlayer3.addEventListener("click", function () {
             if (countPlayer3 > 1) {
                 countPlayer3--;
                 chanceValue3.innerHTML = countPlayer3;
+                console.log(countPlayer3, guess, "here");
                 if (guess == inputPlayer3.value) {
                     // 3 Match, 2 did not match
                     console.log("Player 3 wins");
+                    field3.style.display = "none";
+                    field4.style.display = "block";
+                    chanceValue4.innerHTML = countPlayer4;
                     btnPlayer4.addEventListener("click", function () {
-                        field3.style.display = "none";
-                        field4.style.display = "block";
                         if (countPlayer4 > 1) {
                             countPlayer4--;
+                            console.log(countPlayer4, guess);
                             chanceValue4.innerHTML = countPlayer4;
                             // 4, 3 Match, 2 did not match
                             if (guess == inputPlayer4.value) {
+                                field4.style.display = "none";
+                                result.innerHTML = "Player 3 & 4 wins!";
                                 console.log("Player 3 & 4 wins");
-                            } else {
-                                // 3 Match, 2, 4 did not match
-                                console.log("Player 3 wins, Player 2 & 4 lose");
                             }
+                        } else {
+                            // 3 Match, 2, 4 did not match
+                            field4.style.display = "none";
+                            result.innerHTML = "Player 3 wins!";
+                            console.log("Player 3 wins");
                         }
                     });
                 }
@@ -157,19 +167,23 @@ btnPlayer2.addEventListener("click", function () {
                 console.log("Player 2, 3 lose");
                 field3.style.display = "none";
                 field4.style.display = "block";
+                chanceValue4.innerHTML = countPlayer4;
                 btnPlayer4.addEventListener("click", function () {
                     if (countPlayer4 > 1) {
                         countPlayer4--;
                         chanceValue4.innerHTML = countPlayer4;
+                        console.log(countPlayer4, guess);
                         // 4 match
                         if (guess == inputPlayer4.value) {
                             field4.style.display = "none";
+                            result.innerHTML = "Player 4 wins!";
                             console.log("Player 4 wins");
-                        } else {
-                            // 2, 3, 4 did not match
-                            console.log("Player 1 wins");
-                            field4.style.display = "none";
                         }
+                    } else {
+                        // 2, 3, 4 did not match
+                        result.innerHTML = "Player 1 Wins!";
+                        console.log("Player 1 Wins!");
+                        field4.style.display = "none";
                     }
                 });
             }
