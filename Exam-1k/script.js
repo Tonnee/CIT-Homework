@@ -13,9 +13,13 @@ let error1 = "Give a Number";
 let error2 = "String or symbol not allowed";
 let error3 = "Number should be between 1 to 10";
 let typeText = "";
+let toType = error.innerHTML;
+let plainText = "";
 let textCount = -1;
-error.innerHTML = "";
 let cancel = document.querySelector(".cancelBtn");
+
+let stop = "";
+let backStop = "";
 
 let guess = "";
 
@@ -39,11 +43,26 @@ let restart = document.querySelector(".restart");
 
 function typeJs() {
     textCount++;
-    error.innerHTML += typeText.charAt(textCount);
+    error.innerHTML += toType.charAt(textCount);
+    console.log(toType.length);
+    if (textCount >= toType.length) {
+        clearInterval(stop);
+        cancel.style.display = "block";
+    }
 }
 
-function inputChange() {
-    console.log(inputPlayer1.value);
+function backJs() {
+    console.log(typeText);
+    console.log('Function Called', textCount);
+    if (typeText.length > 0) {
+        textCount--;
+        typeText.pop();
+        error.innerHTML = typeText.join('');
+        cancel.style.display = "none";
+        textCount = -1;
+    } else {
+        clearInterval(backStop);
+    }
 }
 
 function refreshPage() {
@@ -52,18 +71,17 @@ function refreshPage() {
 
 btnPlayer1.addEventListener("click", function () {
     if (inputPlayer1.value == "") {
-        error.innerHTML = "";
-        typeText = error1;
-        setInterval(function () {
+        toType = error1;
+        stop = setInterval(function () {
             typeJs();
-        }, 100);
-        console.log("1");
-        cancel.style.display = "block";
+        }, 30);
+
         cancel.addEventListener("click", function () {
-            error.innerHTML = "";
-            cancel.style.display = "none";
+            typeText = toType.split('');
+            backStop = setInterval(function () {
+                backJs();
+            }, 30);
         });
-        inputChange();
     } else if (inputPlayer1.value - 1 >= 0) {
         if (inputPlayer1.value <= 10 && inputPlayer1.value >= 1) {
             for (let i = 0; i <= 10; i++) {
@@ -80,44 +98,23 @@ btnPlayer1.addEventListener("click", function () {
             field1.style.display = "none";
         } else if (inputPlayer1.value > 10 || inputPlayer1.value <= 0) {
             console.log("3");
-            error.innerHTML = "";
-            typeText = error3;
-            setInterval(function () {
+            toType = error3;
+            stop = setInterval(function () {
                 typeJs();
-            }, 100);
-            cancel.style.display = "block";
-            cancel.addEventListener("click", function () {
-                error.innerHTML = "";
-                cancel.style.display = "none";
-            });
-            inputChange();
+            }, 30);
         }
     } else if (!Boolean(inputPlayer1.value - 1)) {
         console.log("2");
-        error.innerHTML = "";
-        typeText = error2;
-        setInterval(function () {
+        toType = error2;
+        stop = setInterval(function () {
             typeJs();
-        }, 100);
-        cancel.style.display = "block";
-        cancel.addEventListener("click", function () {
-            error.innerHTML = "";
-            cancel.style.display = "none";
-        });
-        inputChange();
+        }, 30);
     } else {
         console.log("4");
-        error.innerHTML = "";
-        typeText = error3;
-        setInterval(function () {
+        toType = error1;
+        stop = setInterval(function () {
             typeJs();
-        }, 100);
-        cancel.style.display = "block";
-        cancel.addEventListener("click", function () {
-            error.innerHTML = "";
-            cancel.style.display = "none";
-        });
-        inputChange();
+        }, 30);
     }
 });
 
