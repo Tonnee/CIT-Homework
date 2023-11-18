@@ -9,7 +9,7 @@
     <body>
         <div class="main">
             <button class="restart">Play Agian</button>
-            <p class="reveal">Player 1 input: <span class="reveal-input">&#128526</span></p>
+            <p class="reveal">Guessing Game <span class="reveal-input">&#128526</span></p>
             <div class="field-1">
                 <h2>Player 1</h2>
                 <input
@@ -20,7 +20,7 @@
                 <button class="btn btn-player-1">Start</button>
                 <div class="error-box">
                     <p class="error"></p>
-                    <button class="cancelBtn">X</button>
+                    <button class="cancelBtn cancel">X</button>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <h2>Player 2</h2>
                 <input
                     type="text"
-                    placeholder="Type a Number"
+                    placeholder="Guess the Number"
                     class="input-player-2"
                 />
                 <button class="btn btn-player-2">Play</button>
@@ -38,7 +38,7 @@
 
                 <div class="error-box">
                     <p class="error-player-2"></p>
-                    <button class="cancelBtn2">X</button>
+                    <button class="cancelBtn2 cancel">X</button>
                 </div>
             </div>
 
@@ -46,26 +46,35 @@
                 <h2>Player 3</h2>
                 <input
                     type="text"
-                    placeholder="Type a Number"
+                    placeholder="Guess the Number"
                     class="input-player-3"
                 />
                 <button class="btn btn-player-3">Play</button>
                 <p class="chance-field3">
                     Chance: <span class="chance-value3"></span>
                 </p>
+
+                <div class="error-box">
+                    <p class="error-player-3"></p>
+                    <button class="cancelBtn3 cancel">X</button>
+                </div>
             </div>
 
             <div class="field-4">
                 <h2>Player 4</h2>
                 <input
                     type="text"
-                    placeholder="Type a Number"
+                    placeholder="Guess the Number"
                     class="input-player-4"
                 />
                 <button class="btn btn-player-4">Play</button>
                 <p class="chance-field4">
                     Chance: <span class="chance-value4"></span>
                 </p>
+                <div class="error-box">
+                    <p class="error-player-4"></p>
+                    <button class="cancelBtn4 cancel">X</button>
+                </div>
             </div>
 
             <p class="result"></p>

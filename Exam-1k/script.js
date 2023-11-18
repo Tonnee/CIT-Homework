@@ -13,11 +13,15 @@ let errorP2 = document.querySelector(".error-player-2");
 let error1 = "Give a Number";
 let error2 = "String or symbol not allowed";
 let error3 = "Number should be between 1 to 10";
+let error4 = "Number should be between 9 to 100";
 let typeText = "";
 let toType = error.innerHTML;
 let plainText = "";
 let textCount = -1;
 let cancel = document.querySelector(".cancelBtn");
+let cancel2 = document.querySelector(".cancelBtn2");
+let cancel3 = document.querySelector(".cancelBtn3");
+let cancel4 = document.querySelector(".cancelBtn4");
 
 let stop = "";
 let backStop = "";
@@ -25,6 +29,9 @@ let backStop = "";
 let guess = "";
 
 let chanceField2 = document.querySelector(".chance-field2");
+let chanceField3 = document.querySelector(".chance-field3");
+let chanceField4 = document.querySelector(".chance-field4");
+
 let chanceValue2 = document.querySelector(".chance-value2");
 let chanceValue3 = document.querySelector(".chance-value3");
 let chanceValue4 = document.querySelector(".chance-value4");
@@ -45,26 +52,62 @@ let restart = document.querySelector(".restart");
 function typeJs() {
     textCount++;
     error.innerHTML += toType.charAt(textCount);
+    errorP2.innerHTML += toType.charAt(textCount);
     console.log(toType.length);
     if (textCount >= toType.length) {
         clearInterval(stop);
         cancel.style.display = "block";
+        cancel2.style.display = "block";
     }
 }
 
 function backJs() {
     console.log(typeText);
-    console.log('Function Called', textCount);
+    console.log("Function Called", textCount);
     if (typeText.length > 0) {
         textCount--;
         typeText.pop();
-        error.innerHTML = typeText.join('');
+        error.innerHTML = typeText.join("");
+        errorP2.innerHTML = typeText.join("");
         cancel.style.display = "none";
+        cancel2.style.display = "none";
         textCount = -1;
     } else {
         clearInterval(backStop);
     }
 }
+
+cancel.addEventListener("click", function () {
+    console.log("Clicked");
+    typeText = toType.split("");
+    backStop = setInterval(function () {
+        backJs();
+    }, 30);
+});
+
+cancel2.addEventListener("click", function () {
+    console.log("Clicked");
+    typeText = toType.split("");
+    backStop = setInterval(function () {
+        backJs();
+    }, 30);
+});
+
+cancel3.addEventListener("click", function () {
+    console.log("Clicked");
+    typeText = toType.split("");
+    backStop = setInterval(function () {
+        backJs();
+    }, 30);
+});
+
+cancel4.addEventListener("click", function () {
+    console.log("Clicked");
+    typeText = toType.split("");
+    backStop = setInterval(function () {
+        backJs();
+    }, 30);
+});
 
 function refreshPage() {
     window.location.reload();
@@ -76,13 +119,6 @@ btnPlayer1.addEventListener("click", function () {
         stop = setInterval(function () {
             typeJs();
         }, 30);
-
-        cancel.addEventListener("click", function () {
-            typeText = toType.split('');
-            backStop = setInterval(function () {
-                backJs();
-            }, 30);
-        });
     } else if (inputPlayer1.value - 1 >= 0) {
         if (inputPlayer1.value <= 10 && inputPlayer1.value >= 1) {
             for (let i = 0; i <= 10; i++) {
@@ -125,23 +161,443 @@ btnPlayer2.addEventListener("click", function () {
         stop = setInterval(function () {
             typeJs();
         }, 30);
-
-        cancel.addEventListener("click", function () {
-            typeText = toType.split("");
-            backStop = setInterval(function () {
-                backJs();
-            }, 30);
-        });
-    } else if (inputPlayer2.value - 1 >= 0) {
-        if (inputPlayer2.value <= 10 && inputPlayer2.value >= 1) {
-            console.log('Number Given');
-        } else if (inputPlayer2.value > 10 || inputPlayer2.value <= 0) {
-            console.log("3");
-            toType = error3;
-            stop = setInterval(function () {
-                typeJs();
-            }, 30);
+    } else if (inputPlayer2.value < 100 && inputPlayer2.value >= 9) {
+        //
+        chanceField2.style.display = "block";
+        console.log(countPlayer2, guess);
+        if (countPlayer2 > 1) {
+            countPlayer2--;
+            chanceValue2.innerHTML = countPlayer2;
+            if (guess == inputPlayer2.value) {
+                // 2 Match
+                console.log("player 2 wins");
+                field2.style.display = "none";
+                field3.style.display = "block";
+                chanceValue3.innerHTML = countPlayer3;
+                //
+                btnPlayer3.addEventListener("click", function () {
+                    if (inputPlayer3.value == "") {
+                        toType = error1;
+                        stop = setInterval(function () {
+                            typeJs();
+                        }, 30);
+                    } else if (inputPlayer3.value - 1 >= 0) {
+                        if (
+                            inputPlayer3.value <= 100 &&
+                            inputPlayer3.value >= 9
+                        ) {
+                            //
+                            chanceField3.style.display = "block";
+                            if (countPlayer3 > 1) {
+                                countPlayer3--;
+                                console.log(countPlayer3, guess);
+                                chanceValue3.innerHTML = countPlayer3;
+                                if (guess == inputPlayer3.value) {
+                                    // 3 Match
+                                    console.log("Player 3 wins");
+                                    field3.style.display = "none";
+                                    field4.style.display = "block";
+                                    chanceValue4.innerHTML = countPlayer4;
+                                    //
+                                    btnPlayer4.addEventListener(
+                                        "click",
+                                        function () {
+                                            if (inputPlayer4.value == "") {
+                                                toType = error1;
+                                                stop = setInterval(function () {
+                                                    typeJs();
+                                                }, 30);
+                                            } else if (
+                                                inputPlayer4.value - 1 >=
+                                                0
+                                            ) {
+                                                if (
+                                                    inputPlayer4.value <= 100 &&
+                                                    inputPlayer4.value >= 9
+                                                ) {
+                                                    //
+                                                    chanceField4.style.display =
+                                                        "block";
+                                                    if (countPlayer4 > 1) {
+                                                        countPlayer4--;
+                                                        chanceValue4.innerHTML =
+                                                            countPlayer4;
+                                                        console.log(
+                                                            countPlayer4,
+                                                            guess
+                                                        );
+                                                        if (
+                                                            guess ==
+                                                            inputPlayer4.value
+                                                        ) {
+                                                            // 4 Match
+                                                            console.log(
+                                                                "Player 4 Wins"
+                                                            );
+                                                            field4.style.display =
+                                                                "none";
+                                                            result.innerHTML =
+                                                                "Player 2, 3, 4 Wins!";
+                                                            console.log(
+                                                                "Player 2, 3, 4 Wins!"
+                                                            );
+                                                            confetti();
+                                                        }
+                                                    } else {
+                                                        // 4 did not match
+                                                        field4.style.display =
+                                                            "none";
+                                                        result.innerHTML =
+                                                            "Player 2, 3 Wins!";
+                                                        console.log(
+                                                            "Player 2, 3 Wins!"
+                                                        );
+                                                        confetti();
+                                                    }
+                                                } else if (
+                                                    inputPlayer4.value > 100 ||
+                                                    inputPlayer1.value < 9
+                                                ) {
+                                                    console.log("3");
+                                                    toType = error4;
+                                                    stop = setInterval(
+                                                        function () {
+                                                            typeJs();
+                                                        },
+                                                        30
+                                                    );
+                                                }
+                                            } else if (
+                                                !Boolean(inputPlayer4.value - 1)
+                                            ) {
+                                                console.log("2");
+                                                toType = error2;
+                                                stop = setInterval(function () {
+                                                    typeJs();
+                                                }, 30);
+                                            } else {
+                                                console.log("4");
+                                                toType = error1;
+                                                stop = setInterval(function () {
+                                                    typeJs();
+                                                }, 30);
+                                            }
+                                        }
+                                    );
+                                }
+                            } else {
+                                console.log();
+                                // 3 did not match, 2 Match
+                                field3.style.display = "none";
+                                field4.style.display = "block";
+                                chanceValue4.innerHTML = countPlayer4;
+                                //
+                                btnPlayer4.addEventListener(
+                                    "click",
+                                    function () {
+                                        if (inputPlayer4.value == "") {
+                                            toType = error1;
+                                            stop = setInterval(function () {
+                                                typeJs();
+                                            }, 30);
+                                        } else if (
+                                            inputPlayer4.value - 1 >=
+                                            0
+                                        ) {
+                                            if (
+                                                inputPlayer4.value <= 100 &&
+                                                inputPlayer4.value >= 9
+                                            ) {
+                                                //
+                                                chanceField4.style.display =
+                                                    "block";
+                                                if (countPlayer4 > 1) {
+                                                    countPlayer4--;
+                                                    chanceValue4.innerHTML =
+                                                        countPlayer4;
+                                                    console.log(
+                                                        countPlayer4,
+                                                        guess
+                                                    );
+                                                    if (
+                                                        guess ==
+                                                        inputPlayer4.value
+                                                    ) {
+                                                        // 4 Match
+                                                        field4.style.display =
+                                                            "none";
+                                                        result.innerHTML =
+                                                            "Player 2, 4 Wins!";
+                                                        console.log(
+                                                            "Player 2, 4 Wins!"
+                                                        );
+                                                        confetti();
+                                                    }
+                                                } else {
+                                                    // 4 did not match
+                                                    field4.style.display =
+                                                        "none";
+                                                    result.innerHTML =
+                                                        "Player 2 Wins!";
+                                                    console.log(
+                                                        "Player 2 Wins!"
+                                                    );
+                                                    confetti();
+                                                }
+                                            } else if (
+                                                inputPlayer4.value > 100 ||
+                                                inputPlayer4.value < 9
+                                            ) {
+                                                console.log("3");
+                                                toType = error4;
+                                                stop = setInterval(function () {
+                                                    typeJs();
+                                                }, 30);
+                                            }
+                                        } else if (
+                                            !Boolean(inputPlayer4.value - 1)
+                                        ) {
+                                            console.log("2");
+                                            toType = error2;
+                                            stop = setInterval(function () {
+                                                typeJs();
+                                            }, 30);
+                                        } else {
+                                            console.log("4");
+                                            toType = error1;
+                                            stop = setInterval(function () {
+                                                typeJs();
+                                            }, 30);
+                                        }
+                                    }
+                                );
+                            }
+                        } else if (
+                            inputPlayer3.value > 100 ||
+                            inputPlayer3.value < 9
+                        ) {
+                            console.log("3");
+                            toType = error4;
+                            stop = setInterval(function () {
+                                typeJs();
+                            }, 30);
+                        }
+                    } else if (!Boolean(inputPlayer3.value - 1)) {
+                        console.log("2");
+                        toType = error2;
+                        stop = setInterval(function () {
+                            typeJs();
+                        }, 30);
+                    } else {
+                        console.log("4");
+                        toType = error1;
+                        stop = setInterval(function () {
+                            typeJs();
+                        }, 30);
+                    }
+                });
+            }
+        } else {
+            // 2 did not match
+            console.log("player 2 lose");
+            field2.style.display = "none";
+            field3.style.display = "block";
+            chanceValue3.innerHTML = countPlayer3;
+            btnPlayer3.addEventListener("click", function () {
+                if (inputPlayer3.value == "") {
+                    toType = error1;
+                    stop = setInterval(function () {
+                        typeJs();
+                    }, 30);
+                } else if (inputPlayer3.value - 1 >= 0) {
+                    if (inputPlayer3.value <= 100 && inputPlayer3.value >= 9) {
+                        //
+                        chanceField3.style.display = "block";
+                        if (countPlayer3 > 1) {
+                            countPlayer3--;
+                            chanceValue3.innerHTML = countPlayer3;
+                            console.log(countPlayer3, guess, "here");
+                            if (guess == inputPlayer3.value) {
+                                // 3 Match, 2 did not match
+                                console.log("Player 3 wins");
+                                field3.style.display = "none";
+                                field4.style.display = "block";
+                                chanceValue4.innerHTML = countPlayer4;
+                                btnPlayer4.addEventListener(
+                                    "click",
+                                    function () {
+                                        if (inputPlayer4.value == "") {
+                                            toType = error1;
+                                            stop = setInterval(function () {
+                                                typeJs();
+                                            }, 30);
+                                        } else if (
+                                            inputPlayer4.value - 1 >=
+                                            0
+                                        ) {
+                                            if (
+                                                inputPlayer4.value <= 100 &&
+                                                inputPlayer4.value >= 9
+                                            ) {
+                                                //
+                                                chanceField4.style.display =
+                                                    "block";
+                                                if (countPlayer4 > 1) {
+                                                    countPlayer4--;
+                                                    console.log(
+                                                        countPlayer4,
+                                                        guess
+                                                    );
+                                                    chanceValue4.innerHTML =
+                                                        countPlayer4;
+                                                    // 4, 3 Match, 2 did not match
+                                                    if (
+                                                        guess ==
+                                                        inputPlayer4.value
+                                                    ) {
+                                                        field4.style.display =
+                                                            "none";
+                                                        result.innerHTML =
+                                                            "Player 3 & 4 wins!";
+                                                        console.log(
+                                                            "Player 3 & 4 wins"
+                                                        );
+                                                        confetti();
+                                                    }
+                                                } else {
+                                                    // 3 Match, 2, 4 did not match
+                                                    field4.style.display =
+                                                        "none";
+                                                    result.innerHTML =
+                                                        "Player 3 wins!";
+                                                    console.log(
+                                                        "Player 3 wins"
+                                                    );
+                                                    confetti();
+                                                }
+                                            } else if (
+                                                inputPlayer4.value > 100 ||
+                                                inputPlayer4.value < 9
+                                            ) {
+                                                console.log("3");
+                                                toType = error4;
+                                                stop = setInterval(function () {
+                                                    typeJs();
+                                                }, 30);
+                                            }
+                                        } else if (
+                                            !Boolean(inputPlayer4.value - 1)
+                                        ) {
+                                            console.log("2");
+                                            toType = error2;
+                                            stop = setInterval(function () {
+                                                typeJs();
+                                            }, 30);
+                                        } else {
+                                            console.log("4");
+                                            toType = error1;
+                                            stop = setInterval(function () {
+                                                typeJs();
+                                            }, 30);
+                                        }
+                                    }
+                                );
+                            }
+                        } else {
+                            // 3 did not match, 2 did not match
+                            console.log("Player 2, 3 lose");
+                            field3.style.display = "none";
+                            field4.style.display = "block";
+                            chanceValue4.innerHTML = countPlayer4;
+                            btnPlayer4.addEventListener("click", function () {
+                                if (inputPlayer4.value == "") {
+                                    toType = error1;
+                                    stop = setInterval(function () {
+                                        typeJs();
+                                    }, 30);
+                                } else if (inputPlayer4.value - 1 >= 0) {
+                                    if (
+                                        inputPlayer4.value <= 100 &&
+                                        inputPlayer4.value >= 9
+                                    ) {
+                                        //
+                                        chanceField4.style.display = "block";
+                                        if (countPlayer4 > 1) {
+                                            countPlayer4--;
+                                            chanceValue4.innerHTML =
+                                                countPlayer4;
+                                            console.log(countPlayer4, guess);
+                                            // 4 match
+                                            if (guess == inputPlayer4.value) {
+                                                field4.style.display = "none";
+                                                result.innerHTML =
+                                                    "Player 4 wins!";
+                                                console.log("Player 4 wins");
+                                                confetti();
+                                            }
+                                        } else {
+                                            // 2, 3, 4 did not match
+                                            result.innerHTML = "Player 1 Wins!";
+                                            confetti();
+                                            console.log("Player 1 Wins!");
+                                            field4.style.display = "none";
+                                        }
+                                    } else if (
+                                        inputPlayer4.value > 100 ||
+                                        inputPlayer4.value < 9
+                                    ) {
+                                        console.log("3");
+                                        toType = error4;
+                                        stop = setInterval(function () {
+                                            typeJs();
+                                        }, 30);
+                                    }
+                                } else if (!Boolean(inputPlayer4.value - 1)) {
+                                    console.log("2");
+                                    toType = error2;
+                                    stop = setInterval(function () {
+                                        typeJs();
+                                    }, 30);
+                                } else {
+                                    console.log("4");
+                                    toType = error1;
+                                    stop = setInterval(function () {
+                                        typeJs();
+                                    }, 30);
+                                }
+                            });
+                        }
+                    } else if (
+                        inputPlayer3.value > 100 ||
+                        inputPlayer3.value < 9
+                    ) {
+                        console.log("3");
+                        toType = error4;
+                        stop = setInterval(function () {
+                            typeJs();
+                        }, 30);
+                    }
+                } else if (!Boolean(inputPlayer3.value - 1)) {
+                    console.log("2");
+                    toType = error2;
+                    stop = setInterval(function () {
+                        typeJs();
+                    }, 30);
+                } else {
+                    console.log("4");
+                    toType = error1;
+                    stop = setInterval(function () {
+                        typeJs();
+                    }, 30);
+                }
+            });
         }
+    } else if (inputPlayer2.value > 100 || inputPlayer1.value < 9) {
+        console.log("3");
+        toType = error4;
+        stop = setInterval(function () {
+            typeJs();
+        }, 30);
     } else if (!Boolean(inputPlayer2.value - 1)) {
         console.log("2");
         toType = error2;
@@ -155,140 +611,6 @@ btnPlayer2.addEventListener("click", function () {
             typeJs();
         }, 30);
     }
-
-
-
-    // console.log(countPlayer2, guess);
-    // if (countPlayer2 > 1) {
-    //     countPlayer2--;
-    //     chanceValue2.innerHTML = countPlayer2;
-    //     if (guess == inputPlayer2.value) {
-    //         // 2 Match
-    //         console.log("player 2 wins");
-    //         field2.style.display = "none";
-    //         field3.style.display = "block";
-    //         chanceValue3.innerHTML = countPlayer3;
-    //         btnPlayer3.addEventListener("click", function () {
-    //             if (countPlayer3 > 1) {
-    //                 countPlayer3--;
-    //                 console.log(countPlayer3, guess);
-    //                 chanceValue3.innerHTML = countPlayer3;
-    //                 if (guess == inputPlayer3.value) {
-    //                     // 3 Match
-    //                     console.log("Player 3 wins");
-    //                     field3.style.display = "none";
-    //                     field4.style.display = "block";
-    //                     chanceValue4.innerHTML = countPlayer4;
-    //                     btnPlayer4.addEventListener("click", function () {
-    //                         if (countPlayer4 > 1) {
-    //                             countPlayer4--;
-    //                             chanceValue4.innerHTML = countPlayer4;
-    //                             console.log(countPlayer4, guess);
-    //                             if (guess == inputPlayer4.value) {
-    //                                 // 4 Match
-    //                                 console.log("Player 4 Wins");
-    //                                 field4.style.display = "none";
-    //                                 result.innerHTML = "Player 2, 3, 4 Wins!";
-    //                                 console.log("Player 2, 3, 4 Wins!");
-    //                             }
-    //                         } else {
-    //                             // 4 did not match
-    //                             field4.style.display = "none";
-    //                             result.innerHTML = "Player 2, 3 Wins!";
-    //                             console.log("Player 2, 3 Wins!");
-    //                         }
-    //                     });
-    //                 }
-    //             } else {
-    //                 console.log();
-    //                 // 3 did not match, 2 Match
-    //                 field3.style.display = "none";
-    //                 field4.style.display = "block";
-    //                 chanceValue4.innerHTML = countPlayer4;
-    //                 btnPlayer4.addEventListener("click", function () {
-    //                     if (countPlayer4 > 1) {
-    //                         countPlayer4--;
-    //                         chanceValue4.innerHTML = countPlayer4;
-    //                         console.log(countPlayer4, guess);
-    //                         if (guess == inputPlayer4.value) {
-    //                             // 4 Match
-    //                             field4.style.display = "none";
-    //                             result.innerHTML = "Player 2, 4 Wins!";
-    //                             console.log("Player 2, 4 Wins!");
-    //                         }
-    //                     } else {
-    //                         // 4 did not match
-    //                         field4.style.display = "none";
-    //                         result.innerHTML = "Player 2 Wins!";
-    //                         console.log("Player 2 Wins!");
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     }
-    // } else {
-    //     // 2 did not match
-    //     console.log("player 2 lose");
-    //     field2.style.display = "none";
-    //     field3.style.display = "block";
-    //     chanceValue3.innerHTML = countPlayer3;
-    //     btnPlayer3.addEventListener("click", function () {
-    //         if (countPlayer3 > 1) {
-    //             countPlayer3--;
-    //             chanceValue3.innerHTML = countPlayer3;
-    //             console.log(countPlayer3, guess, "here");
-    //             if (guess == inputPlayer3.value) {
-    //                 // 3 Match, 2 did not match
-    //                 console.log("Player 3 wins");
-    //                 field3.style.display = "none";
-    //                 field4.style.display = "block";
-    //                 chanceValue4.innerHTML = countPlayer4;
-    //                 btnPlayer4.addEventListener("click", function () {
-    //                     if (countPlayer4 > 1) {
-    //                         countPlayer4--;
-    //                         console.log(countPlayer4, guess);
-    //                         chanceValue4.innerHTML = countPlayer4;
-    //                         // 4, 3 Match, 2 did not match
-    //                         if (guess == inputPlayer4.value) {
-    //                             field4.style.display = "none";
-    //                             result.innerHTML = "Player 3 & 4 wins!";
-    //                             console.log("Player 3 & 4 wins");
-    //                         }
-    //                     } else {
-    //                         // 3 Match, 2, 4 did not match
-    //                         field4.style.display = "none";
-    //                         result.innerHTML = "Player 3 wins!";
-    //                         console.log("Player 3 wins");
-    //                     }
-    //                 });
-    //             }
-    //         } else {
-    //             // 3 did not match, 2 did not match
-    //             console.log("Player 2, 3 lose");
-    //             field3.style.display = "none";
-    //             field4.style.display = "block";
-    //             chanceValue4.innerHTML = countPlayer4;
-    //             btnPlayer4.addEventListener("click", function () {
-    //                 if (countPlayer4 > 1) {
-    //                     countPlayer4--;
-    //                     chanceValue4.innerHTML = countPlayer4;
-    //                     console.log(countPlayer4, guess);
-    //                     // 4 match
-    //                     if (guess == inputPlayer4.value) {
-    //                         field4.style.display = "none";
-    //                         result.innerHTML = "Player 4 wins!";
-    //                         console.log("Player 4 wins");
-    //                     }
-    //                 } else {
-    //                     // 2, 3, 4 did not match
-    //                     result.innerHTML = "Player 1 Wins!";
-    //                     console.log("Player 1 Wins!");
-    //                     field4.style.display = "none";
-    //                 }
-    //             });
-    //         }
-    //     });
-    // }
 });
 
 restart.addEventListener("click", function () {
@@ -311,3 +633,4 @@ restart.addEventListener("click", function () {
     revealInput.innerHTML = "&#128526";
     refreshPage();
 });
+
