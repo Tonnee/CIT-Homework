@@ -1,0 +1,65 @@
+@media (min-width: 320px) and (max-width: 991px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    /* -------------------- nav start -------------------- */
+    nav .nav_wrapper {
+        flex-wrap: wrap;
+    }
+
+    nav label {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    nav .nav_item,
+    nav .nav_btn {
+        display: none;
+    }
+
+    .collapse_btn {
+        font-size: 50px;
+        border: none;
+        background-color: transparent;
+    }
+
+    nav input:checked ~ .nav_item {
+        display: block;
+    }
+
+    nav input:checked ~ .nav_btn {
+        display: block;
+    }
+
+    nav .nav_item {
+        width: 100%;
+    }
+
+    nav .nav_item ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 25px 0;
+        gap: 25px;
+    }
+
+    /* -------------------- nav end -------------------- */
+
+    #banner h1 {
+        font-size: 50px;
+        width: 100%;
+    }
+
+    #banner .shape1,
+    #banner .shape2 {
+        display: none;
+    }
+
+    #banner p {
+        font-size: 20px;
+        width: 100%;
+    }
+}
