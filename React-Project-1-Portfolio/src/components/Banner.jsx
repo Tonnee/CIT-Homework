@@ -6,7 +6,7 @@ const Banner = () => {
         <>
             <div className="banner">
                 <div className="overlay">
-                    <Button text='View My Works'/>
+                    <Button text="View My Works" design="yellow_btn" />
                 </div>
             </div>
         </>
