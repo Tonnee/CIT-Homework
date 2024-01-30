@@ -1,13 +1,13 @@
-import { useState } from "react";
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
-import "./App.css";
+import Banner from "./components/banner/Banner";
+import Nav from "./components/nav/Nav";
 
 function App() {
     return (
         <>
-            <Navbar />
             <Banner />
+            <div className="container">
+                <Nav />
+            </div>
         </>
     );
 }
