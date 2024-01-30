@@ -1,13 +1,11 @@
 import Banner from "./components/banner/Banner";
-import Nav from "./components/nav/Nav";
+import Nav from "././components/nav/Nav";
 
 function App() {
     return (
         <>
+            <Nav />
             <Banner />
-            <div className="container">
-                <Nav />
-            </div>
         </>
     );
 }

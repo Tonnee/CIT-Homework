@@ -1,0 +1,24 @@
+.navbar {
+    position: absolute;
+    width: 100%;
+}
+
+.nav-logo {
+    height: 26px;
+    padding: 20px 0;
+}
+
+.nav-logo img {
+    height: 100%;
+}
+
+.call-icon {
+    font-size: 24px;
+    rotate: 270deg;
+    margin-right: 12px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    margin-left: 16px;
+}
