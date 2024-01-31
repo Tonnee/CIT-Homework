@@ -1,5 +1,5 @@
-import Banner from "./components/banner/Banner";
-import Nav from "././components/nav/Nav";
+import Banner from "./components/molecules/banner/Banner";
+import Nav from "./components/atoms/nav/Nav";
 
 function App() {
     return (

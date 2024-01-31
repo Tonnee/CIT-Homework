@@ -1,6 +1,7 @@
 .navbar {
     position: absolute;
     width: 100%;
+    z-index: 9999;
 }
 
 .nav-logo {
@@ -21,4 +22,8 @@
 .menu-icon {
     font-size: 24px;
     margin-left: 16px;
+}
+
+.navbar p {
+    font-size: 18px;
 }

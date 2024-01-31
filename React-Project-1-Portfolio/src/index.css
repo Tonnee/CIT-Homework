@@ -8,20 +8,8 @@
     margin: 0 auto;
 }
 
-.font_pop {
+.font-pop {
     font-family: Poppins, sans-serif;
-}
-
-.font-20 {
-    font-size: 20px;
-}
-
-.font-30 {
-    font-size: 30px;
-}
-
-.font-semi {
-    font-weight: 600;
 }
 
 .d-flex {
@@ -38,4 +26,8 @@
 
 .text-white {
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
