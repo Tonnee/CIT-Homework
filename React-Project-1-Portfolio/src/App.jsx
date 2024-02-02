@@ -1,12 +1,10 @@
-import { useState } from "react";
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
-import "./App.css";
+import Banner from "./components/molecules/banner/Banner";
+import Nav from "./components/atoms/nav/Nav";
 
 function App() {
     return (
         <>
-            <Navbar />
+            <Nav />
             <Banner />
         </>
     );
