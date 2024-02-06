@@ -8,3 +8,11 @@
   margin: 0 auto;
   padding-top: 100px;
 }
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}

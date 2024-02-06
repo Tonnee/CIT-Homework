@@ -4,13 +4,12 @@ import "./App.css";
 function App() {
     return (
         <>
-        <div className="container">
-          <div className="flex">
-            
-          </div>
-                <Card />
-                <Card />
-                <Card />
+            <div className="container">
+                <div className="flex justify-between">
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
             </div>
         </>
     );
