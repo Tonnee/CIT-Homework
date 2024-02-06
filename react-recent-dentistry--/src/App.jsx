@@ -1,9 +1,11 @@
+import Anchor from "./components/atoms/anchor/anchor";
+
 import "./App.css";
 
 function App() {
     return (
         <>
-            <h1 className="text-3xl text-red-700">Hello</h1>
+            <Anchor link="#" text="Home" style="font-rale"/>
         </>
     );
 }
