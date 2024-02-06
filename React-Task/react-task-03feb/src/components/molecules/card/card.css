@@ -1,0 +1,14 @@
+.w-30 {
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ebebeba6;
+    border-radius: 24px;
+    transition: all linear .2s;
+}
+
+.w-30:hover {
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(214, 214, 214, .5);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(214, 214, 214, .5);
+    box-shadow: 0px 0px 20px 3px rgba(214, 214, 214, .5);
+}
