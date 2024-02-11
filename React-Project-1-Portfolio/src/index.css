@@ -3,13 +3,13 @@
     padding: 0;
 }
 
+html {
+    font-family: "Poppins", sans-serif;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
-}
-
-.font-pop {
-    font-family: Poppins, sans-serif;
 }
 
 .d-flex {
@@ -30,4 +30,16 @@
 
 a {
     text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-66 {
+    width: 66%;
+}
+
+.w-33 {
+    width: 33%;
 }

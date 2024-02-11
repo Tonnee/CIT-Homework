@@ -1,0 +1,40 @@
+.section_top_heading {
+    font-size: 40px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.heading_name {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.heading_number {
+    font-size: 144px;
+    color: #4c4d4d;
+    font-weight: 500;
+    position: relative;
+    z-index: 100;
+    line-height: 1;
+}
+
+.heading_number::after {
+    content: "";
+    position: absolute;
+    background-color: #f5df4e;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading_experience {
+    font-size: 28px;
+    font-weight: 500;
+    color: #212529;
+    margin-top: 20px;
+}

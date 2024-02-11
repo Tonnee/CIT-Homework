@@ -1,0 +1,16 @@
+.section_top_para {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    background-color: #f5df4e !important;
+    font-size: 16px;
+    color: rgb(33, 37, 41);
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.about_text {
+    font-size: 21px;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #212529;
+}

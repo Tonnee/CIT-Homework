@@ -1,11 +1,13 @@
 import Banner from "./components/molecules/banner/Banner";
-import Nav from "./components/atoms/nav/Nav";
+import AboutMe from "./components/organisms/aboutme/AboutMe";
+import Nav from "./components/organisms/nav/Nav";
 
 function App() {
     return (
         <>
             <Nav />
             <Banner />
+            <AboutMe />
         </>
     );
 }
