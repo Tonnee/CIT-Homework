@@ -14,3 +14,7 @@
     margin-bottom: 1rem;
     color: #212529;
 }
+
+.text-muted {
+    color: #6c757d !important;
+}
