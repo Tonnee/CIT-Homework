@@ -16,7 +16,7 @@ const Nav = () => {
 
                         <div className="nav-right text-white d-flex items-center">
                             <IoMdCall className="call-icon" />
-                            <p className="font-18 font-semi">
+                            <p className="font-18 font-semi text-white">
                                 (060) 444 434 444
                             </p>
                             <RxHamburgerMenu className="menu-icon" />

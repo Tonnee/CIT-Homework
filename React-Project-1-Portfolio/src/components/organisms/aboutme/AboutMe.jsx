@@ -7,7 +7,7 @@ import AboutInfo from "../../molecules/aboutInfo/AboutInfo";
 const AboutMe = () => {
     return (
         <>
-            <div className="container">
+            <div className="container mb_104">
                 <SectionHeading
                     tag="h2"
                     heading="Know Me More"
@@ -62,8 +62,8 @@ const AboutMe = () => {
                     <div className="w-25">
                         <AboutInfo
                             tag="h6"
-                            heading="Callum Smith"
-                            para="Name:"
+                            heading="11 November, 1987"
+                            para="Date of birth:"
                             paraStyle="text-muted font_500"
                             headingStyle="font-18 font_600"
                         />
@@ -72,8 +72,8 @@ const AboutMe = () => {
                     <div className="w-25">
                         <AboutInfo
                             tag="h6"
-                            heading="Callum Smith"
-                            para="Name:"
+                            heading="Los Angeles, USA."
+                            para="From:"
                             paraStyle="text-muted font_500"
                             headingStyle="font-18 font_600"
                         />

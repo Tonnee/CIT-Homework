@@ -59,3 +59,15 @@ a {
 .mt_50 {
     margin-top: 50px;
 }
+
+.mb_104 {
+    margin-bottom: 104px;
+}
+
+.py_150 {
+    padding: 150px 0;
+}
+
+.bg_gray {
+    background-color: #FAFAFA;
+}
