@@ -2,11 +2,12 @@ import React from "react";
 import SectionHeading from "../../molecules/sectionHeading/SectionHeading";
 import Heading from "../../atoms/heading/Heading";
 import Paragraph from "../../atoms/paragraph/Paragraph";
+import AboutInfo from "../../molecules/aboutInfo/AboutInfo";
 
 const AboutMe = () => {
     return (
         <>
-            <div className="container">
+            <div className="container mb_104">
                 <SectionHeading
                     tag="h2"
                     heading="Know Me More"
@@ -19,7 +20,7 @@ const AboutMe = () => {
                 <div className="d-flex">
                     <div className="w-66">
                         <Heading as="h3" style="heading_name">
-                            Hi, I'm Callum Smith
+                            Hi, I&apos;m Callum Smith
                         </Heading>
 
                         <Paragraph
@@ -34,6 +35,48 @@ const AboutMe = () => {
                         <Heading as="h6" style="heading_experience">
                             Years of Experiance
                         </Heading>
+                    </div>
+                </div>
+
+                <div className="d-flex mt_50">
+                    <div className="w-25">
+                        <AboutInfo
+                            tag="h6"
+                            heading="Callum Smith"
+                            para="Name:"
+                            paraStyle="text-muted font_500"
+                            headingStyle="font-18 font_600"
+                        />
+                    </div>
+
+                    <div className="w-25">
+                        <AboutInfo
+                            tag="h6"
+                            heading="chat@callum.com"
+                            para="Email:"
+                            paraStyle="text-muted font_500"
+                            headingStyle="font-18 font_600"
+                        />
+                    </div>
+
+                    <div className="w-25">
+                        <AboutInfo
+                            tag="h6"
+                            heading="11 November, 1987"
+                            para="Date of birth:"
+                            paraStyle="text-muted font_500"
+                            headingStyle="font-18 font_600"
+                        />
+                    </div>
+
+                    <div className="w-25">
+                        <AboutInfo
+                            tag="h6"
+                            heading="Los Angeles, USA."
+                            para="From:"
+                            paraStyle="text-muted font_500"
+                            headingStyle="font-18 font_600"
+                        />
                     </div>
                 </div>
             </div>

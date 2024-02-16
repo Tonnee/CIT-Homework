@@ -43,3 +43,31 @@ a {
 .w-33 {
     width: 33%;
 }
+
+.w-25 {
+    width: 25%;
+}
+
+.font_500 {
+    font-weight: 500;
+}
+
+.font_600 {
+    font-weight: 600;
+}
+
+.mt_50 {
+    margin-top: 50px;
+}
+
+.mb_104 {
+    margin-bottom: 104px;
+}
+
+.py_150 {
+    padding: 150px 0;
+}
+
+.bg_gray {
+    background-color: #FAFAFA;
+}
