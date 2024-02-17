@@ -2,7 +2,18 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-        extend: {},
+        extend: {
+            maxWidth: {
+                container: "1604px",
+            },
+            fontFamily: {
+                dm: "DM Sans",
+            },
+            colors: {
+                gray76: "#767676",
+                gray26: "#262626",
+            },
+        },
     },
     plugins: [],
 };
