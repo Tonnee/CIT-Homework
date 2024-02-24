@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "../atoms/Image";
 import Logo from "../assets/orebi-logo.png";
 import Flex from "../layout/Flex";
@@ -8,7 +8,18 @@ import ItemList from "../layout/ItemList";
 import { IoIosMenu } from "react-icons/io";
 
 const Navbar = () => {
-    let [show, setShow] = useState(false);
+    let [show, setShow] = useState(true);
+
+    useEffect(() => {
+        function resizeWidth() {
+            if (window.innerWidth < 769) {
+                setShow(false);
+            } else {
+                setShow(true);
+            }
+        }
+        window.addEventListener("resize", resizeWidth);
+    });
 
     return (
         <>
@@ -19,36 +30,35 @@ const Navbar = () => {
                             <div className="absolute left-0">
                                 <Image imgSrc={Logo} imgAlt="Orebi Logo" />
                             </div>
-                            {show &&
-                            
-                            <List className="flex gap-10">
-                                <ItemList
-                                    style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
-                                    text="Home"
-                                    link="#"
-                                />
-                                <ItemList
-                                    style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
-                                    text="Shop"
-                                    link="#"
-                                />
-                                <ItemList
-                                    style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
-                                    text="About"
-                                    link="#"
-                                />
-                                <ItemList
-                                    style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
-                                    text="Contacts"
-                                    link="#"
-                                />
-                                <ItemList
-                                    style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
-                                    text="Journal"
-                                    link="#"
-                                />
-                            </List>
-                            }
+                            {show && (
+                                <List className="flex gap-10">
+                                    <ItemList
+                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
+                                        text="Home"
+                                        link="#"
+                                    />
+                                    <ItemList
+                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
+                                        text="Shop"
+                                        link="#"
+                                    />
+                                    <ItemList
+                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
+                                        text="About"
+                                        link="#"
+                                    />
+                                    <ItemList
+                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
+                                        text="Contacts"
+                                        link="#"
+                                    />
+                                    <ItemList
+                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200"
+                                        text="Journal"
+                                        link="#"
+                                    />
+                                </List>
+                            )}
 
                             {/*Mobile Menu*/}
                             <IoIosMenu className="lg:hidden block text-3xl text-black" />
