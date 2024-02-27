@@ -1,8 +1,10 @@
 import React from "react";
-import Image from "../atoms/Image";
+import Image from "../layout/Image";
 import BannerImage1 from "../assets/banner-slider-1.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import Link from "../layout/Link";
+import Container from "../layout/Container";
 
 const Banner = () => {
     var settings = {
@@ -12,28 +14,47 @@ const Banner = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        appendDots: (dots) => (
+            <div>
+                <ul
+                    style={{
+                        width: "22px",
+                        position: "absolute",
+                        top: "50%",
+                        left: "8%",
+                    }}
+                >
+                    {" "}
+                    {dots}{" "}
+                </ul>
+            </div>
+        ),
+        customPaging: (i) => (
+            <div
+                style={{
+                    fontSize: "10px",
+                    color: "blue",
+                    borderRight: "3px solid #262626",
+                }}
+            >
+                {i + 1}
+            </div>
+        ),
     };
     return (
-        <Slider {...settings}>
-            <div>
-                <Image imgSrc={BannerImage1} />
-            </div>
-            <div>
-                <h3>2</h3>
-            </div>
-            <div>
-                <h3>3</h3>
-            </div>
-            <div>
-                <h3>4</h3>
-            </div>
-            <div>
-                <h3>5</h3>
-            </div>
-            <div>
-                <h3>6</h3>
-            </div>
-        </Slider>
+        <>
+            <Slider {...settings}>
+                <a href="#">
+                    <Image imgSrc={BannerImage1} className="block w-full" />
+                </a>
+                <a href="#">
+                    <Image imgSrc={BannerImage1} className="block w-full" />
+                </a>
+                <a href="#">
+                    <Image imgSrc={BannerImage1} className="block w-full" />
+                </a>
+            </Slider>
+        </>
     );
 };
 
