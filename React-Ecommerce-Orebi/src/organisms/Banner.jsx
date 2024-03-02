@@ -3,7 +3,7 @@ import Image from "../layout/Image";
 import BannerImage1 from "../assets/banner-slider-1.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import Link from "../layout/Link";
+import Link from "../layout/Linkhref";
 import Container from "../layout/Container";
 
 const Banner = () => {

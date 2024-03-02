@@ -1,12 +1,13 @@
-import Navbar from "./organisms/Navbar";
-import Home from "./pages/Home";
+import React from 'react'
+import RootLayout from './layout/RootLayout'
 
-function App() {
-    return (
-        <>
-            <Home />
-        </>
-    );
+const App = () => {
+  return (
+    <>
+      <RootLayout/>
+    </>
+  )
 }
 
-export default App;
+export default App
+

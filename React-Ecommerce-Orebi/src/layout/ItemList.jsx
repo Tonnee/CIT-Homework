@@ -1,11 +1,9 @@
 import React from "react";
 
-const ItemList = ({ text, style, link }) => {
+const ItemList = ({ style, children }) => {
     return (
         <>
-            <li className={style}>
-                <a href={link}>{text}</a>
-            </li>
+            <li className={style}>{children}</li>
         </>
     );
 };

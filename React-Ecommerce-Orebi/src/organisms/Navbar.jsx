@@ -6,6 +6,8 @@ import List from "../layout/List";
 import ItemList from "../layout/ItemList";
 import Container from "../layout/Container";
 import { IoIosMenu } from "react-icons/io";
+import Linkhref from "../layout/Linkhref";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     let [show, setShow] = useState(true);
@@ -36,31 +38,21 @@ const Navbar = () => {
 
                             {show && (
                                 <List className="md:flex md:gap-10 md:static absolute left-2 top-10">
-                                    <ItemList
-                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0"
-                                        text="Home"
-                                        link="#"
-                                    />
-                                    <ItemList
-                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0"
-                                        text="Shop"
-                                        link="#"
-                                    />
-                                    <ItemList
-                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0"
-                                        text="About"
-                                        link="#"
-                                    />
-                                    <ItemList
-                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0"
-                                        text="Contacts"
-                                        link="#"
-                                    />
-                                    <ItemList
-                                        style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0"
-                                        text="Journal"
-                                        link="#"
-                                    />
+                                    <ItemList style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0">
+                                        <Link to="/">Home</Link>
+                                    </ItemList>
+                                    <ItemList style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0">
+                                        <Link to="/shop">Shop</Link>
+                                    </ItemList>
+                                    <ItemList style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0">
+                                        <Link to="/about">About</Link>
+                                    </ItemList>
+                                    <ItemList style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0">
+                                        <Link to="/contacts">Contacts</Link>
+                                    </ItemList>
+                                    <ItemList style="font-dm text-sm font-normal text-gray76 hover:text-gray26 hover:font-bold hover:transition-all hover:duration-200 my-2.5 md:my-0">
+                                        <Link to="/journal">Journal</Link>
+                                    </ItemList>
                                 </List>
                             )}
 

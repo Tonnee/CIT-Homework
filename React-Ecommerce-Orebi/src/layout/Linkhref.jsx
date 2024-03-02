@@ -1,6 +1,6 @@
 import React from "react";
 
-const Link = ({ to, text, className }) => {
+const Linkhref = ({ to, text, className }) => {
     return (
         <>
             <a href={to} className={className}>
@@ -10,4 +10,4 @@ const Link = ({ to, text, className }) => {
     );
 };
 
-export default Link;
+export default Linkhref;
