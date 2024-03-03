@@ -6,7 +6,6 @@ import List from "../layout/List";
 import ItemList from "../layout/ItemList";
 import Container from "../layout/Container";
 import { IoIosMenu } from "react-icons/io";
-import Linkhref from "../layout/Linkhref";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

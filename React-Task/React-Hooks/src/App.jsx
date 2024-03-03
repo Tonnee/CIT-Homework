@@ -2,17 +2,33 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-    let [count, setCount] = useState(0);
+    // let [info, setInfo] = useState({
+    //     count: 0,
+    //     name: "",
+    // });
 
-    let handleClick = () => {
-        count = count + 1;
-        setCount(count);
-    };
+    // let handleClick = () => {
+    //     info.count++;
+    //     setInfo((prev) => ({
+    //         ...prev,
+    //         count: info.count,
+    //     }));
+    // };
+
+    // let handleChange = (e) => {
+    //     setInfo((prev) => ({
+    //         ...prev,
+    //         name: e.target.value,
+    //     }));
+    // };
 
     return (
         <>
-            <h1>{count}</h1>
-            <button onClick={handleClick}>Click</button>
+            {/* <input type="text" onChange={handleChange} />
+            <h1>
+                {info.name}: {info.count}
+            </h1>
+            <button onClick={handleClick}>Click</button> */}
         </>
     );
 }
