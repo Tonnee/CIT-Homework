@@ -13,6 +13,7 @@ export default {
                 gray76: "#767676",
                 gray26: "#262626",
                 grayF5: "#F5F5F3",
+                grayD8: "#D8D8D8",
             },
             spacing: {
                 "25px": "25px",

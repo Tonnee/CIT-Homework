@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "../layout/Image";
-import Logo from "../assets/orebi-logo.png";
+import Logo from "../../assets/orebi-logo.png";
 import Flex from "../layout/Flex";
 import List from "../layout/List";
 import ItemList from "../layout/ItemList";

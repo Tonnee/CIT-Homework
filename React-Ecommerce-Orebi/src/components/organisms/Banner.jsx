@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "../layout/Image";
-import BannerImage1 from "../assets/banner-slider-1.png";
+import BannerImage1 from "../../assets/banner-slider-1.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import Link from "../layout/Linkhref";
