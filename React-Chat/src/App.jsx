@@ -5,12 +5,12 @@ import {
     Route,
     RouterProvider,
 } from "react-router-dom";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Messages from "./pages/Messages";
-import Notifications from "./pages/Notifications";
-import Registration from "./pages/Registration";
-import Settings from "./pages/Settings";
+import Login from "./components/pages/Login";
+import Home from "./components/pages/Home";
+import Messages from "./components/pages/Messages";
+import Notifications from "./components/pages/Notifications";
+import Registration from "./components/pages/Registration";
+import Settings from "./components/pages/Settings";
 
 function App() {
     const router = createBrowserRouter(
