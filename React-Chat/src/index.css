@@ -53,24 +53,24 @@ a {
     width: 368px;
 }
 
-.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
-    margin-bottom: 50px;
+.inputBox {
+    margin-bottom: 55px;
+    position: relative;
 }
 
 .signUpBtn {
-    padding: 20px 145px;
-    font-family: "Nunito Sans", sans-serif;
-    font-size: 20px;
-    color: #fff;
-    border-radius: 86px;
-    background-color: #5F35F5;
-    border: none;
-    cursor: pointer;
-    transition: all linear .2s;
+    display: block;
+    padding: 12px 145px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 20px !important;
+    color: #fff !important;
+    border-radius: 86px !important;
+    background-color: #5F35F5 !important;
+    border: none !important;
 }
 
 .signUpBtn:hover {
-    background-color: #4010ee;
+    background-color: #4010ee !important;
 }
 
 .regiText .regiSignIn {
@@ -80,6 +80,14 @@ a {
     width: 368px;
     text-align: center;
     margin-top: 35px;
+}
+
+.regError {
+    width: 368px !important;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: transparent !important;
+    color: red !important;
 }
 
 /* Registration Page end*/
