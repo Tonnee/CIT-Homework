@@ -67,10 +67,30 @@ a {
     border-radius: 86px !important;
     background-color: #5F35F5 !important;
     border: none !important;
+    position: relative;
+}
+
+.signUpBtn.loading {
+    display: block;
+    padding: 12px 145px !important;
+    font-family: "Nunito Sans", sans-serif !important;
+    font-size: 20px !important;
+    color: #fff !important;
+    border-radius: 86px !important;
+    background-color: #8d8d8d !important;
+    border: none !important;
+    position: relative;
 }
 
 .signUpBtn:hover {
     background-color: #4010ee !important;
+}
+
+.signUpBtn:disabled {
+    background-color: #959595 !important;
+    /* Change background color of disabled button */
+    color: #000 !important;
+    /* Change text color of disabled button */
 }
 
 .regiText .regiSignIn {
@@ -88,6 +108,29 @@ a {
     position: absolute;
     background-color: transparent !important;
     color: red !important;
+}
+
+.inputPassword {
+    position: relative;
+    width: 368px;
+}
+
+.eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-40%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.oval {
+    position: absolute;
+    left: 90px;
+}
+
+.oval circle {
+    stroke: #fff;
 }
 
 /* Registration Page end*/
