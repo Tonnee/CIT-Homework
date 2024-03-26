@@ -1,0 +1,10 @@
+.my-20px {
+    margin: 0 10px;
+}
+
+.result {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
