@@ -2,10 +2,13 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-      extend: {
-        maxWidth: {
-            container: '1604px'
-          }
+        extend: {
+            maxWidth: {
+                container: "1604px",
+            },
+            fontFamily: {
+                dmsans: '"DM Sans", sans-serif',
+            },
         },
     },
     plugins: [],
