@@ -1,7 +1,7 @@
 const Container = ({ children }) => {
     return (
         <>
-            <div className="max-w-container mx-auto">{children}</div>
+            <div className="max-w-container mx-auto px-5">{children}</div>
         </>
     );
 };

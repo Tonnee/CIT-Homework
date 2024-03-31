@@ -4,10 +4,14 @@ export default {
     theme: {
         extend: {
             maxWidth: {
-                container: "1604px",
+                container: "1644px",
             },
             fontFamily: {
-                dmsans: '"DM Sans", sans-serif',
+                dm: ["DM Sans", "sans-serif"],
+            },
+            colors: {
+                gray76: "#767676",
+                gray26: "#262626",
             },
         },
     },
