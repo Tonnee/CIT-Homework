@@ -1,9 +1,6 @@
 const Flex = ({ className, children }) => {
-    return (
-        <>
-            <div className={`flex ${className}`}>{children}</div>
-        </>
-    );
+    const classes = `flex ${className}`;
+    return <div className={classes}>{children}</div>;
 };
 
 export default Flex;

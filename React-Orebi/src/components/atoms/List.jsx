@@ -1,9 +1,7 @@
-import React from "react";
-
-const List = ({ className, children }) => {
+const List = ({ clasName, children }) => {
     return (
         <>
-            <ul className={className}>{children}</ul>
+            <ul className={clasName}>{children}</ul>
         </>
     );
 };

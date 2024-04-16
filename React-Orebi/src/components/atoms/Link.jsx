@@ -1,14 +1,11 @@
-import React from "react";
 
-const Link = ({ linkref, className, text, children }) => {
-    return (
-        <>
-            <a href={linkref} className={className}>
-                {children}
-                {text}
-            </a>
-        </>
-    );
-};
 
-export default Link;
+const Link = ({ linkRef, linkText, className, children}) => {
+  return (
+    <>
+          <a href={linkRef} className={className}>{linkText}{children}</a>
+    </>
+  )
+}
+
+export default Link
