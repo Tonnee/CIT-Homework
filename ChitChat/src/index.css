@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 img {
@@ -11,4 +19,45 @@ img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+}
+
+.reg-div {
+    width: 497px;
+    margin-left: auto;
+    padding-right: 50px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.reg-div .input-div {
+    width: 368px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-div .input-div .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    margin-bottom: 40px;
+
+}
+
+.reg-div h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #11175D;
+    margin-bottom: 12px;
+}
+
+.reg-div p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, .50);
+    margin-bottom: 50px;
+}
+
+.reg-div .css-sghohy-MuiButtonBase-root-MuiButton-root{
+    background-color: #5F35F5;
+    padding: 15px 140px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 86px;
 }
