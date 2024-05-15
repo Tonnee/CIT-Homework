@@ -23,11 +23,19 @@ const Registration = () => {
 
     let handleChange = (e) => {
         setRegData({ ...regData, [e.target.name]: e.target.value });
+        setRegError({ ...regError, [e.target.name]: "" });
     };
 
     let handleSubmit = () => {
+        let parrern =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
         if (!regData.email) {
             setRegError({ ...regError, email: "Email Required" });
+        } else if (!regData.name) {
+            setRegError({ ...regError, name: "Name Required" });
+        } else if (!regData.password) {
+            setRegError({ ...regError, password: "password Required" });
         }
     };
     return (
@@ -70,6 +78,10 @@ const Registration = () => {
                                 onChange={handleChange}
                             />
 
+                            {regError.name && (
+                                <Alert severity="error">{regError.name}</Alert>
+                            )}
+
                             <TextField
                                 required
                                 id="outlined-required"
@@ -78,6 +90,12 @@ const Registration = () => {
                                 name="password"
                                 onChange={handleChange}
                             />
+
+                            {regError.password && (
+                                <Alert severity="error">
+                                    {regError.password}
+                                </Alert>
+                            )}
 
                             <Button
                                 variant="contained"
