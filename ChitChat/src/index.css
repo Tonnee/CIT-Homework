@@ -37,6 +37,7 @@ img {
 
 .reg-div .input-div .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .reg-div h1 {
@@ -52,7 +53,7 @@ img {
     margin-bottom: 50px;
 }
 
-.reg-div .css-sghohy-MuiButtonBase-root-MuiButton-root{
+.reg-div .css-sghohy-MuiButtonBase-root-MuiButton-root {
     background-color: #5F35F5;
     padding: 15px 140px;
     font-size: 18px;
@@ -63,4 +64,16 @@ img {
 
 .reg-div .css-x7o5da-MuiPaper-root-MuiAlert-root {
     margin-bottom: 20px;
+}
+
+.passwordEye {
+    position: relative;
+}
+
+.passwordEye .eye {
+    position: absolute;
+    top: 12%;
+    right: 5px;
+    cursor: pointer;
+    padding: 10px;
 }

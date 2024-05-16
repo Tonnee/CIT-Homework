@@ -7,6 +7,8 @@ import registrationImage from "../../assets/registration.png";
 import Heading from "../atoms/Heading";
 import Paragraph from "../atoms/Paragraph";
 import Alert from "@mui/material/Alert";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const Registration = () => {
     let [regData, setRegData] = useState({
@@ -26,16 +28,38 @@ const Registration = () => {
         setRegError({ ...regError, [e.target.name]: "" });
     };
 
+    let [openEye, setOpenEye] = useState(true);
+
     let handleSubmit = () => {
-        let parrern =
+        let pattern =
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         if (!regData.email) {
             setRegError({ ...regError, email: "Email Required" });
+        } else if (!pattern.test(regData.email)) {
+            setRegError({ ...regError, email: "Valid Email Required" });
         } else if (!regData.name) {
             setRegError({ ...regError, name: "Name Required" });
         } else if (!regData.password) {
             setRegError({ ...regError, password: "password Required" });
+        } else if (regData.password.length < 6) {
+            setRegError({
+                ...regError,
+                password: "password length 6 required",
+            });
+        } else {
+            const auth = getAuth();
+            createUserWithEmailAndPassword(
+                auth,
+                regData.email,
+                regData.password
+            )
+                .then((userCredential) => {
+                    console.log("user created", userCredential);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
         }
     };
     return (
@@ -82,14 +106,30 @@ const Registration = () => {
                                 <Alert severity="error">{regError.name}</Alert>
                             )}
 
-                            <TextField
-                                required
-                                id="outlined-required"
-                                label="Password"
-                                type="password"
-                                name="password"
-                                onChange={handleChange}
-                            />
+                            <div className="passwordEye">
+                                <TextField
+                                    required
+                                    id="outlined-required"
+                                    label="Password"
+                                    type={openEye ? "password" : "text"}
+                                    name="password"
+                                    onChange={handleChange}
+                                />
+
+                                {!openEye && (
+                                    <FaRegEye
+                                        onClick={() => setOpenEye(!openEye)}
+                                        className="eye"
+                                    />
+                                )}
+
+                                {openEye && (
+                                    <FaRegEyeSlash
+                                        onClick={() => setOpenEye(!openEye)}
+                                        className="eye"
+                                    />
+                                )}
+                            </div>
 
                             {regError.password && (
                                 <Alert severity="error">
